@@ -12,7 +12,9 @@
 
   <button @click="openModal">Open Modal</button><br />
   <modal :isOpen="modalIsOpen"
-         @close-modal="onModalClose" />
+         @close-modal="onModalClose">
+    <div>kkk</div>
+  </modal>
 
   <h1 v-if="
          loading">Loading!...</h1>
@@ -116,7 +118,8 @@ export default defineComponent({
     const openModal = () => {
       modalIsOpen.value = true;
     };
-    const onModalClose = () => {
+    const onModalClose = (a: unknown) => {
+      console.log("a", a);
       modalIsOpen.value = false;
     };
 

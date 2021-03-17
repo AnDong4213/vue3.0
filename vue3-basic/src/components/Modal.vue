@@ -4,7 +4,7 @@
          v-if="isOpen">
       <h1>
         <slot>
-          this is a modal
+          this is a modal3
         </slot>
       </h1>
       <button @click="buttonClick">Close</button>
@@ -24,10 +24,12 @@ export default defineComponent({
   },
   setup(props, context) {
     const buttonClick = () => {
-      context.emit("close-modal");
+      context.emit("close-modal", "99");
     };
 
-    return buttonClick;
+    return {
+      buttonClick
+    };
   }
 });
 </script>
