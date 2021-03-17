@@ -1,41 +1,28 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org"
-         target="_blank"
-         rel="noopener">vue-cli documentation</a>.
-    </p>
   </div>
 </template>
 
 <script lang="ts">
+// 并未实现任何的逻辑，就是把传入的object直接返回，传入的对象获得相应的类型，完全服务typescript
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
   props: {
-    msg: String
+    msg: {
+      required: true,
+      type: String
+    }
+  },
+  setup(props, context) {
+    console.log(props.msg);
+    console.log(context);
   }
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
