@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <span :title="msg">鼠标悬停几秒钟查看此处动态绑定的提示信息！</span>
   </div>
 </template>
 

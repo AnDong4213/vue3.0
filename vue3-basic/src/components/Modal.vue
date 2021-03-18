@@ -3,9 +3,10 @@
     <div id="center"
          v-if="isOpen">
       <h1>
-        <slot>
+        <slot name="header">
           this is a modal3
         </slot>
+        <slot></slot>
       </h1>
       <button @click="buttonClick">Close</button>
     </div>

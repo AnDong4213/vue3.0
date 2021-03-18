@@ -10,10 +10,26 @@
   <h1>{{person.name}}</h1>
   <h1>{{greetings}}</h1>
 
+  <p style="color: red;">{{error}}</p>
+  <Suspense>
+    <template #default>
+      <div>
+        <async-show />
+        <dog-show />
+      </div>
+    </template>
+    <template #fallback>
+      <h1>Loading !...</h1>
+    </template>
+  </Suspense>
+
   <button @click="openModal">Open Modal</button><br />
   <modal :isOpen="modalIsOpen"
          @close-modal="onModalClose">
-    <div>kkk</div>
+    <template v-slot:header>
+      <div>kkk</div>
+    </template>
+    <p style="color: red;">ee</p>
   </modal>
 
   <h1 v-if="
@@ -29,9 +45,19 @@
 
 <script lang="ts">
 // import {defineComponent,ref,computed,reactive,toRefs,onMounted,onUpdated,onRenderTriggered} from "vue";
-import { defineComponent, ref, computed, reactive, toRefs, watch } from "vue";
+import {
+  defineComponent,
+  ref,
+  computed,
+  reactive,
+  toRefs,
+  watch,
+  onErrorCaptured
+} from "vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 import Modal from "@/components/Modal.vue";
+import AsyncShow from "@/components/AsyncShow.vue";
+import DogShow from "@/components/DogShow.vue";
 import useMousePosition from "@/hooks/useMousePosition";
 import useURLLoader from "@/hooks/useURLLoader";
 
@@ -79,6 +105,13 @@ export default defineComponent({
     onRenderTriggered(event => {
       console.log(event);
     }); */
+
+    const error = ref(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    onErrorCaptured((e: any) => {
+      error.value = e;
+      return true;
+    });
 
     const data: DataProps = reactive({
       count: 0,
@@ -135,12 +168,15 @@ export default defineComponent({
       loaded,
       modalIsOpen,
       openModal,
-      onModalClose
+      onModalClose,
+      error
     };
   },
   components: {
     HelloWorld,
-    Modal
+    Modal,
+    AsyncShow,
+    DogShow
   }
 });
 </script>
