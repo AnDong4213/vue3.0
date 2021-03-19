@@ -1,6 +1,8 @@
 <template>
-  <h1>{{count}}</h1>
+  <h1 v-show="modalIsOpen">{{count}}</h1>
   <h1>{{double}}</h1>
+  <button @click="increase">+1</button><br />
+  <search-input></search-input>
   <!-- <ul>
     <li v-for="number in numbers"
         :key="number">
@@ -38,9 +40,10 @@
        v-if="loaded"
        :src="result[0].url">
   <h1>X: {{x}}, Y: {{y}}</h1>
-  <button @click="increase">+1</button><br />
-  <button @click="updateGreeting">Update Title</button>
-  <HelloWorld msg="mm" />
+  <button :style="{'font-size': postFontSize+ 'px'}"
+          @click="updateGreeting">Update Title</button>
+  <HelloWorld @enlarge-text="postFontSize += $event"
+              msg="mm" />
 </template>
 
 <script lang="ts">
@@ -81,6 +84,11 @@ interface CatResult {
 
 export default defineComponent({
   name: "App",
+  data() {
+    return {
+      postFontSize: 16
+    };
+  },
   setup() {
     // count就是一个(把js原始类型转化为响应对象)响应式的对象，可以监测到改变
     /* const count = ref(0);
@@ -170,6 +178,14 @@ export default defineComponent({
       openModal,
       onModalClose,
       error
+    };
+  },
+  /* provide: {
+    user: "John Doe"
+  }, */
+  provide() {
+    return {
+      user: this.modalIsOpen
     };
   },
   components: {

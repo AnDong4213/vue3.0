@@ -1,16 +1,23 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <span :title="msg">鼠标悬停几秒钟查看此处动态绑定的提示信息！</span>
+  <div class="hello"
+       ref="root">
+    <h1 @click="$emit('enlargeText', 2)">{{ msg }}-{{randomNum}}</h1>
+    <self-test class="qw"
+               date-picker='yy'
+               v-model.trim="randomNum" />
   </div>
 </template>
 
 <script lang="ts">
 // 并未实现任何的逻辑，就是把传入的object直接返回，传入的对象获得相应的类型，完全服务typescript
-import { defineComponent } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
+import SelfTest from "@/components/SelfTest.vue";
 
 export default defineComponent({
   name: "HelloWorld",
+  data() {
+    return {};
+  },
   props: {
     msg: {
       required: true,
@@ -20,6 +27,18 @@ export default defineComponent({
   setup(props, context) {
     console.log(props.msg);
     console.log(context);
+    const randomNum = ref("91");
+    const root2 = ref(null);
+    onMounted(() => {
+      // DOM元素将在初始渲染后分配给ref
+      console.log(root2.value); // <div>这是根元素</div>
+    });
+
+    return { randomNum, root2 };
+  },
+  emits: ["enlargeText"],
+  components: {
+    SelfTest
   }
 });
 </script>
