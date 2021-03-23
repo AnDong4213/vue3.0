@@ -27,8 +27,10 @@ export default defineComponent({
       context.emit("form-submit", result);
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const callback = (func: any) => {
-      funcArr.push(func);
+    const callback = (func?: ValidateFunc) => {
+      if (func) {
+        funcArr.push(func);
+      }
     };
     emitter.on("form-item-created", callback);
     onUnmounted(() => {
