@@ -2,7 +2,7 @@ import { ref, Ref, onMounted, onUnmounted } from "vue";
 
 type MyComponentProps = Ref<null | HTMLElement>;
 
-const useClickOutside = (elementRef: MyComponentProps) => {
+const useClickOutside = (elementRef: MyComponentProps): Ref => {
   const isClickOutside = ref(false);
 
   const handler = (e: MouseEvent) => {
