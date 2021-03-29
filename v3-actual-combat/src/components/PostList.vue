@@ -21,7 +21,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType, computed } from "vue";
+import { useStore } from "vuex";
 import { PostProps } from "@/store";
 
 export default defineComponent({
@@ -30,6 +31,11 @@ export default defineComponent({
       required: true,
       type: Array as PropType<PostProps[]>
     }
+  },
+  setup() {
+    const store = useStore();
+    const currentUser = computed(() => store.state.user);
+    console.log(currentUser.value.isLogin);
   }
 });
 </script>

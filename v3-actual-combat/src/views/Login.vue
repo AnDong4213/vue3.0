@@ -52,8 +52,19 @@ export default defineComponent({
       console.log("result", result);
       if (result) {
         // router.push({ name: "column", params: { id: 3 } });
-        router.push("/");
-        store.commit("login");
+        const payload = {
+          email: emailVal.value,
+          password: passwordVal.value
+        };
+        store
+          .dispatch("loginAndFetch", payload)
+          .then(res => {
+            console.log("res", res);
+            router.push("/");
+          })
+          .catch(e => {
+            console.log(e.message);
+          });
       }
     };
     return {

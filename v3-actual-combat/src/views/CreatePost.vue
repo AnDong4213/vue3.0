@@ -54,17 +54,17 @@ export default defineComponent({
       if (result) {
         // router.push("/");
         // store.commit("login");
-        const { columnId } = store.state.user;
-        if (columnId) {
-          const newPost: PostProps = {
+        const { column } = store.state.user;
+        if (column) {
+          /* const newPost: PostProps = {
             id: new Date().getTime(),
             title: titleVal.value,
             content: contentVal.value,
-            columnId,
+            columnId: column,
             createdAt: new Date().toLocaleString()
           };
           store.commit("createPost", newPost);
-          router.push({ name: "column", params: { id: columnId } });
+          router.push({ name: "column", params: { id: column } }); */
         }
       }
     };
