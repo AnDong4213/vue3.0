@@ -1,5 +1,6 @@
 <template>
-  <div class="login-page">
+  <div class="login-page mx-auto p-3 w-330">
+    <h5 class="my-4 text-center">登录到者也</h5>
     <validate-form @form-submit="onFormSubmit">
       <div class="mb-3">
         <label for="form-label"
@@ -16,8 +17,12 @@
                         :rules="passwordRules"
                         v-model="passwordVal" />
       </div>
-      <template v-slot:submit>
+      <!-- <template v-slot:submit>
         <span class="btn btn-danger">Submit</span>
+      </template> -->
+      <template #submit>
+        <button type="submit"
+                class="btn btn-primary btn-block btn-large">登录</button>
       </template>
     </validate-form>
   </div>
@@ -29,6 +34,7 @@ import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import ValidateInput, { RulesProp } from "@/components/ValidateInput.vue";
 import ValidateForm from "@/components/ValidateForm.vue";
+import createMessage from "@/components/createMessage";
 
 export default defineComponent({
   name: "Login",
@@ -58,8 +64,8 @@ export default defineComponent({
         };
         store
           .dispatch("loginAndFetch", payload)
-          .then(res => {
-            console.log("res", res);
+          .then(() => {
+            createMessage("登录成功 2秒后跳转首页", "success");
             router.push("/");
           })
           .catch(e => {

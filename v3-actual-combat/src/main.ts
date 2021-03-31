@@ -9,6 +9,7 @@ export const CODE = "F2BF08A0B5157C38";
 axios.defaults.baseURL = "http://apis.imooc.com/api";
 axios.interceptors.request.use(config => {
   store.commit("setLoading", true);
+  store.commit("setError", { status: false, message: "" });
   if (config.method?.toLocaleLowerCase() === "post") {
     config.data = { ...config.data, icode: CODE };
   } else {
