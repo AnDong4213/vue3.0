@@ -1,6 +1,9 @@
 <template>
   <div class="create-post-page">
     <h4>新建文章</h4>
+    <input type="file"
+           name="file"
+           @change.prevent="handleFileChange" />
     <validate-form @form-submit="onFormSubmit">
       <div class="mb-3">
         <label class="form-label">文章标题：</label>
@@ -28,10 +31,10 @@
 import { defineComponent, ref } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
-import { GlobalDataProps } from "@/store";
-import { PostProps } from "@/testData";
-import ValidateInput, { RulesProp } from "../components/ValidateInput.vue";
-import ValidateForm from "../components/ValidateForm.vue";
+import axios from "axios";
+import { GlobalDataProps, PostProps } from "@/store";
+import ValidateInput, { RulesProp } from "@/components/ValidateInput.vue";
+import ValidateForm from "@/components/ValidateForm.vue";
 
 export default defineComponent({
   name: "Login",
@@ -52,20 +55,38 @@ export default defineComponent({
     ];
     const onFormSubmit = (result: boolean) => {
       if (result) {
-        // router.push("/");
-        // store.commit("login");
         const { column } = store.state.user;
         if (column) {
-          /* const newPost: PostProps = {
-            id: new Date().getTime(),
+          const newPost: PostProps = {
             title: titleVal.value,
             content: contentVal.value,
-            columnId: column,
-            createdAt: new Date().toLocaleString()
+            column
           };
           store.commit("createPost", newPost);
-          router.push({ name: "column", params: { id: column } }); */
+          router.push({ name: "column", params: { id: column } });
         }
+      }
+    };
+    const handleFileChange = (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      console.log("e", e);
+      console.log("e.target", e.target);
+      console.log("e.target", target.files);
+      const files = Array.from(target.files as FileList);
+      if (files) {
+        const uploadedFile = files[0];
+        const formData = new FormData();
+        formData.append("file", uploadedFile);
+        console.log(formData.getAll("file"));
+        axios
+          .post("/upload", formData, {
+            headers: {
+              "Content-Type": "multipart/form-data"
+            }
+          })
+          .then((resp: unknown) => {
+            console.log(resp);
+          });
       }
     };
     return {
@@ -73,7 +94,8 @@ export default defineComponent({
       titleVal,
       contentVal,
       contentRules,
-      onFormSubmit
+      onFormSubmit,
+      handleFileChange
     };
   }
 });
