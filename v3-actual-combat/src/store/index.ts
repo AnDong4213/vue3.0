@@ -8,7 +8,13 @@ export interface UserProps {
   column?: string;
   email?: string;
 }
-interface ImageProps {
+
+export interface ResponseType<P> {
+  code: number;
+  msg: string;
+  data: P;
+}
+export interface ImageProps {
   _id?: string;
   url?: string;
   createdAt?: string;
@@ -120,12 +126,12 @@ const store = createStore<GlobalDataProps>({
     async loginAndFetch({ dispatch }, loginData) {
       await dispatch("login", loginData);
       return await dispatch("fetchCurrentUser");
-    },
-    loginAndFetch2({ dispatch }, loginData) {
+    }
+    /* loginAndFetch2({ dispatch }, loginData) {
       return dispatch("login", loginData).then(() => {
         return dispatch("fetchCurrentUser");
       });
-    }
+    } */
   },
   getters: {
     getColumnById: state => (id: string) => {
