@@ -31,9 +31,10 @@ export interface PostProps {
   title: string;
   excerpt?: string;
   content?: string;
-  image?: ImageProps;
+  image?: ImageProps | string;
   createdAt?: string;
   column: string;
+  author?: string;
 }
 export interface GlobalDataProps {
   token: string;
@@ -129,6 +130,9 @@ const store = createStore<GlobalDataProps>({
     },
     fetchCurrentUser({ commit }) {
       return getAndCommit("/user/current", "fetchCurrentUser", commit);
+    },
+    createPost({ commit }, payload) {
+      return postAndCommit("/posts", "createPost", commit, payload);
     },
     async loginAndFetch({ dispatch }, loginData) {
       await dispatch("login", loginData);
