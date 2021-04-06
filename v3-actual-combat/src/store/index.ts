@@ -54,6 +54,7 @@ const getAndCommit = async (
 ) => {
   const { data } = await axios.get(url);
   commit(mutationName, data);
+  return data;
 };
 const postAndCommit = async (
   url: string,
@@ -106,23 +107,28 @@ const store = createStore<GlobalDataProps>({
     },
     setLoading(state, status) {
       state.loading = status;
+    },
+    logout(state) {
+      state.token = "";
+      window.localStorage.removeItem("token");
+      delete axios.defaults.headers.common.Authorization;
     }
   },
   actions: {
     fetchColumns({ commit }) {
-      getAndCommit("/columns", "fetchColumns", commit);
+      return getAndCommit("/columns", "fetchColumns", commit);
     },
     fetchColumn({ commit }, cid) {
-      getAndCommit(`/columns/${cid}`, "fetchColumn", commit);
+      return getAndCommit(`/columns/${cid}`, "fetchColumn", commit);
     },
     fetchPosts({ commit }, cid) {
-      getAndCommit(`/columns/${cid}/posts`, "fetchPosts", commit);
+      return getAndCommit(`/columns/${cid}/posts`, "fetchPosts", commit);
     },
     login({ commit }, payload) {
       return postAndCommit("/user/login", "login", commit, payload);
     },
     fetchCurrentUser({ commit }) {
-      getAndCommit("/user/current", "fetchCurrentUser", commit);
+      return getAndCommit("/user/current", "fetchCurrentUser", commit);
     },
     async loginAndFetch({ dispatch }, loginData) {
       await dispatch("login", loginData);
