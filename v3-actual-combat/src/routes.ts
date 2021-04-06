@@ -5,6 +5,7 @@ import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import ColumnDetail from "@/views/ColumnDetail.vue";
 import CreatePost from "@/views/CreatePost.vue";
+import PostDetail from "@/views/PostDetail.vue";
 import Signup from "@/views/Signup.vue";
 import axios from "axios";
 
@@ -43,6 +44,11 @@ const router = createRouter({
       path: "/column/:id",
       name: "column",
       component: ColumnDetail
+    },
+    {
+      path: "/posts/:id",
+      name: "post",
+      component: PostDetail
     }
   ]
 });

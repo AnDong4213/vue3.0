@@ -7,6 +7,7 @@ export interface UserProps {
   _id?: string;
   column?: string;
   email?: string;
+  avatar?: ImageProps;
 }
 
 export interface ResponseType<P> {
@@ -34,8 +35,23 @@ export interface PostProps {
   image?: ImageProps | string;
   createdAt?: string;
   column: string;
-  author?: string;
+  author?: string | UserProps;
+  isHTML?: boolean;
 }
+export interface GlobalErrorProps {
+  status: boolean;
+  message?: string;
+}
+
+interface ListProps<P> {
+  [id: string]: P;
+}
+
+export interface GlobalPostsProps {
+  data: ListProps<PostProps>;
+  loadedColumns: ListProps<{ total?: number; currentPage?: number }>;
+}
+
 export interface GlobalDataProps {
   token: string;
   error: GlobalErrorProps;
@@ -44,10 +60,7 @@ export interface GlobalDataProps {
   posts: PostProps[];
   user: UserProps;
 }
-export interface GlobalErrorProps {
-  status: boolean;
-  message?: string;
-}
+
 const getAndCommit = async (
   url: string,
   mutationName: string,
@@ -106,6 +119,9 @@ const store = createStore<GlobalDataProps>({
     fetchPosts(state, rawData) {
       state.posts = rawData.data.list;
     },
+    fetchPost(state, { data }) {
+      state.posts[0] = data;
+    },
     setLoading(state, status) {
       state.loading = status;
     },
@@ -137,12 +153,21 @@ const store = createStore<GlobalDataProps>({
     async loginAndFetch({ dispatch }, loginData) {
       await dispatch("login", loginData);
       return await dispatch("fetchCurrentUser");
-    }
+    },
     /* loginAndFetch2({ dispatch }, loginData) {
       return dispatch("login", loginData).then(() => {
         return dispatch("fetchCurrentUser");
       });
     } */
+    fetchPost({ commit, state }, id) {
+      const data = state.posts;
+      const certainPost = data[0];
+      if (!certainPost || !certainPost.content) {
+        return getAndCommit(`/posts/${id}`, "fetchPost", commit);
+      } else {
+        return Promise.resolve({ data: certainPost });
+      }
+    }
   },
   getters: {
     getColumnById: state => (id: string) => {
@@ -150,6 +175,10 @@ const store = createStore<GlobalDataProps>({
     },
     getPostsByCid: state => (cid: string) => {
       return state.posts.filter(post => post.column === cid);
+    },
+    getCurrentPost: state => (id: string) => {
+      console.log("getCurrentPost", id);
+      return state.posts[0];
     }
   }
 });
