@@ -8,7 +8,7 @@
           <router-link :to="`/posts/${post._id}/`">{{post.title}}</router-link>
         </h4>
         <div class="row my-3 align-items-center">
-          <div v-if="post.image && typeof post.image !== 'string'"
+          <div v-if="post.image"
                class="col-4">
             <img :src="post.image.fitUrl"
                  :alt="post.title"
@@ -42,7 +42,6 @@ export default defineComponent({
         return post;
       });
     });
-
     return {
       posts
     };

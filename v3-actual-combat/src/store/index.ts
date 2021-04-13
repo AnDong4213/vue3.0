@@ -8,6 +8,7 @@ export interface UserProps {
   column?: string;
   email?: string;
   avatar?: ImageProps;
+  description?: string;
 }
 
 export interface ResponseType<P> {
@@ -120,7 +121,7 @@ const store = createStore<GlobalDataProps>({
       state.posts = rawData.data.list;
     },
     fetchPost(state, { data }) {
-      state.posts[0] = data;
+      state.posts = [data];
     },
     setLoading(state, status) {
       state.loading = status;
@@ -178,7 +179,7 @@ const store = createStore<GlobalDataProps>({
     },
     getCurrentPost: state => (id: string) => {
       console.log("getCurrentPost", id);
-      return state.posts[0];
+      return state.posts.find(post => post._id === id);
     }
   }
 });
