@@ -159,6 +159,7 @@ export default defineComponent({
     const openModal = () => {
       modalIsOpen.value = true;
     };
+
     const onModalClose = (a: unknown) => {
       console.log("a", a);
       modalIsOpen.value = false;
@@ -184,8 +185,11 @@ export default defineComponent({
     user: "John Doe"
   }, */
   provide() {
+    // console.log("this", this);
     return {
-      user: this.modalIsOpen
+      // user: this.modalIsOpen
+      user: computed(() => this.modalIsOpen),
+      haha: "hhaha"
     };
   },
   components: {

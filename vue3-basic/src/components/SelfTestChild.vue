@@ -1,6 +1,7 @@
 <template>
   <section>
-    <h2>provide-inject-{{user}}</h2>
+    <h2>provide-inject-{{user.value}}</h2>
+    <em>{{haha}}</em>
   </section>
 </template>
 
@@ -8,6 +9,6 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  inject: ["user"]
+  inject: ["user", "haha"]
 });
 </script>

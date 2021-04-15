@@ -7,6 +7,8 @@ import ColumnDetail from "@/views/ColumnDetail.vue";
 import CreatePost from "@/views/CreatePost.vue";
 import PostDetail from "@/views/PostDetail.vue";
 import Signup from "@/views/Signup.vue";
+import Proxy from "@/views/Proxy.vue";
+
 import axios from "axios";
 
 const routerHistory = createWebHistory();
@@ -49,6 +51,11 @@ const router = createRouter({
       path: "/posts/:id",
       name: "post",
       component: PostDetail
+    },
+    {
+      path: "/proxy",
+      name: "proxy",
+      component: Proxy
     }
   ]
 });
