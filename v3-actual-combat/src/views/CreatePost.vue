@@ -7,6 +7,7 @@
     <Uploader action="/upload"
               :beforeUpload="uploadCheck"
               @file-uploaded="handleFileUploaded"
+              :uploaded="uploadedData"
               class="d-flex align-items-center justify-content-center bg-light text-secondary w-100 my-4">
       <h2>点击上传头图</h2>
       <template #loading>
@@ -19,7 +20,10 @@
         </div>
       </template>
       <template #uploaded="dataProps">
-        <img :src="dataProps.uploadedData.data.url">
+        <div class="uploaded-area">
+          <img :src="dataProps.uploadedData.data.url">
+          <h3>点击重新上传</h3>
+        </div>
       </template>
     </Uploader>
     <validate-form @form-submit="onFormSubmit">
@@ -39,16 +43,16 @@
                         v-model="contentVal" />
       </div>
       <template #submit>
-        <button class="btn btn-primary btn-large">发表文章</button>
+        <button class="btn btn-primary btn-large">{{isEditMode ? '更新文章' : '发表文章'}}</button>
       </template>
     </validate-form>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 import { useStore } from "vuex";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { GlobalDataProps, PostProps, ResponseType, ImageProps } from "@/store";
 import ValidateInput, { RulesProp } from "@/components/ValidateInput.vue";
 import ValidateForm from "@/components/ValidateForm.vue";
@@ -59,10 +63,14 @@ import { beforeUploadCheck } from "@/utils/helper";
 export default defineComponent({
   name: "Login",
   setup() {
-    const titleVal = ref("");
     const router = useRouter();
+    const route = useRoute();
     const store = useStore<GlobalDataProps>();
+    const isEditMode = !!route.query.id;
     let imageId = "";
+    const uploadedData = ref();
+
+    const titleVal = ref("");
     const titleRules: RulesProp = [
       { type: "required", message: "文章标题不能为空" }
     ];
@@ -70,6 +78,20 @@ export default defineComponent({
     const contentRules: RulesProp = [
       { type: "required", message: "文章详情不能为空" }
     ];
+    onMounted(() => {
+      if (isEditMode) {
+        store
+          .dispatch("fetchPost", route.query.id)
+          .then((rawData: ResponseType<PostProps>) => {
+            const currentPost = rawData.data;
+            if (currentPost.image) {
+              uploadedData.value = { data: currentPost.image };
+            }
+            titleVal.value = currentPost.title;
+            contentVal.value = currentPost.content || "";
+          });
+      }
+    });
     const handleFileUploaded = (rawData: ResponseType<ImageProps>) => {
       if (rawData.data._id) {
         imageId = rawData.data._id;
@@ -99,25 +121,7 @@ export default defineComponent({
         }
       }
     };
-    /* const handleFileChange = (e: Event) => {
-      const target = e.target as HTMLInputElement;
-      const files = Array.from(target.files as FileList);
-      if (files) {
-        const uploadedFile = files[0];
-        const formData = new FormData();
-        formData.append("file", uploadedFile);
-        console.log(formData.getAll("file"));
-        axios
-          .post("/upload", formData, {
-            headers: {
-              "Content-Type": "multipart/form-data"
-            }
-          })
-          .then((resp: unknown) => {
-            console.log(resp);
-          });
-      }
-    }; */
+
     const uploadCheck = (file: File) => {
       const result = beforeUploadCheck(file, {
         format: ["image/jpeg", "image/png"],
@@ -140,8 +144,30 @@ export default defineComponent({
       onFormSubmit,
       // handleFileChange
       uploadCheck,
-      handleFileUploaded
+      handleFileUploaded,
+      isEditMode,
+      uploadedData
     };
+
+    /* const handleFileChange = (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      const files = Array.from(target.files as FileList);
+      if (files) {
+        const uploadedFile = files[0];
+        const formData = new FormData();
+        formData.append("file", uploadedFile);
+        console.log(formData.getAll("file"));
+        axios
+          .post("/upload", formData, {
+            headers: {
+              "Content-Type": "multipart/form-data"
+            }
+          })
+          .then((resp: unknown) => {
+            console.log(resp);
+          });
+      }
+    }; */
   },
   components: {
     ValidateInput,
@@ -155,10 +181,25 @@ export default defineComponent({
 .create-post-page .file-upload-container {
   height: 200px;
   cursor: pointer;
+  overflow: hidden;
 }
 .create-post-page .file-upload-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.uploaded-area {
+  position: relative;
+}
+.uploaded-area:hover h3 {
+  display: block;
+}
+.uploaded-area h3 {
+  display: none;
+  position: absolute;
+  color: #999;
+  text-align: center;
+  width: 100%;
+  top: 50%;
 }
 </style>

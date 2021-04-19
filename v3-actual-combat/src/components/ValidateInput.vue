@@ -3,15 +3,15 @@
     <input class="form-control"
            v-if="tag !== 'textarea'"
            :class="{'is-invalid': inputRef.error}"
-           :value="inputRef.val"
            @blur="validateInput"
+           :value="inputRef.val"
            @input="updateValue"
            v-bind="$attrs" />
     <textarea v-else
               class="form-control"
               :class="{'is-invalid': inputRef.error}"
-              :value="inputRef.val"
               @blur="validateInput"
+              :value="inputRef.val"
               @input="updateValue"
               v-bind="$attrs">
     </textarea>
@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, PropType, onMounted } from "vue";
+import { defineComponent, reactive, PropType, onMounted, watch } from "vue";
 import { emitter } from "./ValidateForm.vue";
 export interface RuleProp {
   type: "required" | "email" | "custom";
@@ -50,7 +50,16 @@ export default defineComponent({
       message: ""
     });
 
+    watch(
+      () => props.modelValue,
+      newVal => {
+        console.log("watch trigger");
+        inputRef.val = newVal || "";
+      }
+    );
+
     const updateValue = (e: KeyboardEvent) => {
+      console.log("update trigger");
       const targetValue = (e.target as HTMLInputElement).value;
       inputRef.val = targetValue;
       context.emit("update:modelValue", targetValue);

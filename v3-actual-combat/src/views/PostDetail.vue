@@ -15,6 +15,15 @@
         <span class="text-muted col text-right font-italic">发表于：{{currentPost.createdAt}}</span>
       </div>
       <div v-html="currentHTML"></div>
+
+      <div v-if="showEditArea"
+           class="btn-group mt-5">
+        <router-link type="button"
+                     class="btn btn-success"
+                     :to="{ name: 'create', query: {id: currentPost._id}}">编辑</router-link>
+        <button type="button"
+                class="btn btn-danger">删除</button>
+      </div>
     </article>
   </div>
 </template>
@@ -28,8 +37,8 @@ import UserProfile from "@/components/UserProfile.vue";
 import {
   GlobalDataProps,
   PostProps,
-  ImageProps
-  // UserProps,
+  ImageProps,
+  UserProps
   // ResponseType
 } from "@/store";
 
@@ -66,10 +75,20 @@ export default defineComponent({
       }
     });
 
+    const showEditArea = computed(() => {
+      if (currentPost.value && currentPost.value.author) {
+        const postAuthor = currentPost.value.author as UserProps;
+        return postAuthor._id === store.state.user._id;
+      } else {
+        return false;
+      }
+    });
+
     return {
       currentHTML,
       currentImageUrl,
-      currentPost
+      currentPost,
+      showEditArea
     };
   },
   components: {
