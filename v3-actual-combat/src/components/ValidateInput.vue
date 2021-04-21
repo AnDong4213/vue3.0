@@ -4,15 +4,13 @@
            v-if="tag !== 'textarea'"
            :class="{'is-invalid': inputRef.error}"
            @blur="validateInput"
-           :value="inputRef.val"
-           @input="updateValue"
+           v-model="inputVal"
            v-bind="$attrs" />
     <textarea v-else
               class="form-control"
               :class="{'is-invalid': inputRef.error}"
               @blur="validateInput"
-              :value="inputRef.val"
-              @input="updateValue"
+              v-model="inputVal"
               v-bind="$attrs">
     </textarea>
     <span v-if="inputRef.error"
@@ -21,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, PropType, onMounted, watch } from "vue";
+import { defineComponent, reactive, PropType, onMounted, computed } from "vue";
 import { emitter } from "./ValidateForm.vue";
 export interface RuleProp {
   type: "required" | "email" | "custom";
@@ -50,32 +48,41 @@ export default defineComponent({
       message: ""
     });
 
-    watch(
+    const inputVal = computed({
+      get: () => props.modelValue || "",
+      set: val => {
+        console.log("val", val);
+        context.emit("update:modelValue", val);
+      }
+    });
+
+    /* watch(
       () => props.modelValue,
       newVal => {
         console.log("watch trigger");
         inputRef.val = newVal || "";
       }
     );
-
     const updateValue = (e: KeyboardEvent) => {
       console.log("update trigger");
       const targetValue = (e.target as HTMLInputElement).value;
       inputRef.val = targetValue;
       context.emit("update:modelValue", targetValue);
-    };
+    }; */
 
     const validateInput = () => {
       if (props.rules) {
         const allPassed = props.rules.every(rule => {
           let passed = true;
           inputRef.message = rule.message;
+          const { value } = inputVal;
           switch (rule.type) {
             case "required":
-              passed = inputRef.val.trim() !== "";
+              // passed = inputRef.val.trim() !== "";
+              passed = value.trim() !== "";
               break;
             case "email":
-              passed = emailReg.test(inputRef.val);
+              passed = emailReg.test(value);
               break;
             case "custom":
               passed = rule.validator ? rule.validator() : true;
@@ -96,7 +103,8 @@ export default defineComponent({
     return {
       inputRef,
       validateInput,
-      updateValue
+      inputVal
+      // updateValue
     };
   },
   emits: ["update:modelValue"]

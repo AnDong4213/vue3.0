@@ -112,7 +112,14 @@ export default defineComponent({
           }
           // store.commit("createPost", newPost);
           // router.push({ name: "column", params: { id: column } });
-          store.dispatch("createPost", newPost).then(() => {
+          const actionName = isEditMode ? "updatePost" : "createPost";
+          const sendData = isEditMode
+            ? {
+                id: route.query.id,
+                payload: newPost
+              }
+            : newPost;
+          store.dispatch(actionName, sendData).then(() => {
             createMessage("发表成功，2秒后跳转到文章", "success", 2000);
             setTimeout(() => {
               router.push({ name: "column", params: { id: column } });

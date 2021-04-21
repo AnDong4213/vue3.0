@@ -10,15 +10,15 @@ axios.defaults.baseURL = "http://apis.imooc.com/api";
 axios.interceptors.request.use(config => {
   store.commit("setLoading", true);
   store.commit("setError", { status: false, message: "" });
-  if (config.method?.toLocaleLowerCase() === "post") {
+  if (config.method?.toLocaleLowerCase() === "get") {
+    config.params = { ...config.params, icode: CODE };
+  } else {
     // config.data = { ...config.data, icode: CODE };
     if (config.data instanceof FormData) {
       config.data.append("icode", CODE);
     } else {
       config.data = { ...config.data, icode: CODE };
     }
-  } else {
-    config.params = { ...config.params, icode: CODE };
   }
   return config;
 });

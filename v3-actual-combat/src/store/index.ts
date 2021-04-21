@@ -1,5 +1,5 @@
 import { createStore, Commit } from "vuex";
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 export interface UserProps {
   isLogin: boolean;
@@ -62,7 +62,7 @@ export interface GlobalDataProps {
   user: UserProps;
 }
 
-const getAndCommit = async (
+/* const getAndCommit = async (
   url: string,
   mutationName: string,
   commit: Commit
@@ -78,7 +78,25 @@ const postAndCommit = async (
   payload: unknown
 ) => {
   try {
+    console.log("payload", payload);
     const { data } = await axios.post(url, payload);
+    commit(mutationName, data);
+    return data;
+  } catch (error) {
+    return Promise.reject(new Error(error.message));
+  }
+}; */
+const asyncAndCommit = async (
+  url: string,
+  mutationName: string,
+  commit: Commit,
+  config: AxiosRequestConfig = { method: "get" }
+) => {
+  try {
+    const { data } = await axios(url, {
+      method: config.method,
+      data: config.data
+    });
     commit(mutationName, data);
     return data;
   } catch (error) {
@@ -108,8 +126,8 @@ const store = createStore<GlobalDataProps>({
     setError(state, e: GlobalErrorProps) {
       state.error = e;
     },
-    createPost(state, newPost) {
-      state.posts.push(newPost);
+    createPost(state, { data }) {
+      state.posts.push(data);
     },
     fetchColumns(state, rawData) {
       state.columns = rawData.data.list;
@@ -123,8 +141,20 @@ const store = createStore<GlobalDataProps>({
     fetchPost(state, { data }) {
       state.posts = [data];
     },
+    updatePost(state, { data }) {
+      state.posts = state.posts.map(post => {
+        if (post._id === data._id) {
+          return data;
+        } else {
+          return post;
+        }
+      });
+    },
     setLoading(state, status) {
       state.loading = status;
+    },
+    deletePost(state, { data }) {
+      state.posts = state.posts.filter(post => post._id !== data._id);
     },
     logout(state) {
       state.token = "";
@@ -134,22 +164,39 @@ const store = createStore<GlobalDataProps>({
   },
   actions: {
     fetchColumns({ commit }) {
-      return getAndCommit("/columns", "fetchColumns", commit);
+      return asyncAndCommit("/columns", "fetchColumns", commit);
     },
     fetchColumn({ commit }, cid) {
-      return getAndCommit(`/columns/${cid}`, "fetchColumn", commit);
+      return asyncAndCommit(`/columns/${cid}`, "fetchColumn", commit);
     },
     fetchPosts({ commit }, cid) {
-      return getAndCommit(`/columns/${cid}/posts`, "fetchPosts", commit);
+      return asyncAndCommit(`/columns/${cid}/posts`, "fetchPosts", commit);
     },
     login({ commit }, payload) {
-      return postAndCommit("/user/login", "login", commit, payload);
+      return asyncAndCommit("/user/login", "login", commit, {
+        data: payload,
+        method: "post"
+      });
     },
     fetchCurrentUser({ commit }) {
-      return getAndCommit("/user/current", "fetchCurrentUser", commit);
+      return asyncAndCommit("/user/current", "fetchCurrentUser", commit);
     },
     createPost({ commit }, payload) {
-      return postAndCommit("/posts", "createPost", commit, payload);
+      return asyncAndCommit("/posts", "createPost", commit, {
+        data: payload,
+        method: "post"
+      });
+    },
+    updatePost({ commit }, { id, payload }) {
+      return asyncAndCommit(`/posts/${id}`, "updatePost", commit, {
+        method: "patch",
+        data: payload
+      });
+    },
+    deletePost({ commit }, id) {
+      return asyncAndCommit(`/posts/${id}`, "deletePost", commit, {
+        method: "delete"
+      });
     },
     async loginAndFetch({ dispatch }, loginData) {
       await dispatch("login", loginData);
@@ -164,7 +211,7 @@ const store = createStore<GlobalDataProps>({
       const data = state.posts;
       const certainPost = data[0];
       if (!certainPost || !certainPost.content) {
-        return getAndCommit(`/posts/${id}`, "fetchPost", commit);
+        return asyncAndCommit(`/posts/${id}`, "fetchPost", commit);
       } else {
         return Promise.resolve({ data: certainPost });
       }
@@ -178,7 +225,7 @@ const store = createStore<GlobalDataProps>({
       return state.posts.filter(post => post.column === cid);
     },
     getCurrentPost: state => (id: string) => {
-      console.log("getCurrentPost", id);
+      // console.log("getCurrentPost", id);
       return state.posts.find(post => post._id === id);
     }
   }

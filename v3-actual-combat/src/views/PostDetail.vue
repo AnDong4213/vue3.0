@@ -1,5 +1,10 @@
 <template>
   <div class="post-detail-page w-690">
+    <modal title="删除文章"
+           content="确定要删除这篇文章吗？"
+           @modal-on-close="modalIsVisible = false"
+           @modal-on-confirm="hideAndDelete"
+           :visible="modalIsVisible" />
     <article class="mb-5 pb-3"
              v-if="currentPost">
       <img :src="currentImageUrl"
@@ -22,33 +27,37 @@
                      class="btn btn-success"
                      :to="{ name: 'create', query: {id: currentPost._id}}">编辑</router-link>
         <button type="button"
-                class="btn btn-danger">删除</button>
+                class="btn btn-danger"
+                @click="modalIsVisible  = true">删除</button>
       </div>
     </article>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, computed } from "vue";
+import { defineComponent, onMounted, computed, ref } from "vue";
 import MarkdownIt from "markdown-it";
 import { useStore } from "vuex";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import UserProfile from "@/components/UserProfile.vue";
+import Modal from "@/components/Modal.vue";
+import createMessage from "@/components/createMessage";
 import {
   GlobalDataProps,
   PostProps,
   ImageProps,
-  UserProps
-  // ResponseType
+  UserProps,
+  ResponseType
 } from "@/store";
 
 export default defineComponent({
   name: "post-detail",
   setup() {
     const store = useStore<GlobalDataProps>();
-    // const router = useRouter();
+    const router = useRouter();
     const route = useRoute();
     const currentId = route.params.id;
+    const modalIsVisible = ref(false);
     const md = new MarkdownIt();
 
     onMounted(() => {
@@ -84,15 +93,34 @@ export default defineComponent({
       }
     });
 
+    const hideAndDelete = () => {
+      modalIsVisible.value = false;
+      store
+        .dispatch("deletePost", currentId)
+        .then((rawData: ResponseType<PostProps>) => {
+          console.log("rawData", rawData);
+          createMessage("删除成功，2秒后跳转到专栏首页", "success", 2000);
+          setTimeout(() => {
+            router.push({
+              name: "column",
+              params: { id: rawData.data.column }
+            });
+          }, 2000);
+        });
+    };
+
     return {
       currentHTML,
       currentImageUrl,
       currentPost,
-      showEditArea
+      showEditArea,
+      hideAndDelete,
+      modalIsVisible
     };
   },
   components: {
-    UserProfile
+    UserProfile,
+    Modal
   }
 });
 </script>
