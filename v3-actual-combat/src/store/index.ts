@@ -97,6 +97,7 @@ const asyncAndCommit = async (
       method: config.method,
       data: config.data
     });
+    // console.log(data);
     commit(mutationName, data);
     return data;
   } catch (error) {
@@ -225,7 +226,6 @@ const store = createStore<GlobalDataProps>({
       return state.posts.filter(post => post.column === cid);
     },
     getCurrentPost: state => (id: string) => {
-      // console.log("getCurrentPost", id);
       return state.posts.find(post => post._id === id);
     }
   }

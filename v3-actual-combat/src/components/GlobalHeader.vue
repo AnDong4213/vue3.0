@@ -28,7 +28,8 @@
           <dropdown-item disabled><a href="#"
                class="dropdown-item">编辑资料</a></dropdown-item>
           <dropdown-item><a href="#"
-               class="dropdown-item">退出登陆</a></dropdown-item>
+               class="dropdown-item"
+               @click="handleLogout">退出登陆</a></dropdown-item>
         </dropdown>
       </li>
     </ul>
@@ -37,9 +38,11 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
+import { useRouter } from "vue-router";
 import Dropdown from "@/components/Dropdown.vue";
 import DropdownItem from "@/components/DropdownItem.vue";
-import { UserProps } from "@/store";
+import store, { UserProps } from "@/store";
+import createMessage from "@/components/createMessage";
 
 export default defineComponent({
   name: "GlobalHeader",
@@ -48,6 +51,20 @@ export default defineComponent({
       type: Object as PropType<UserProps>,
       required: true
     }
+  },
+  setup() {
+    const router = useRouter();
+    const handleLogout = () => {
+      store.commit("logout");
+      createMessage("退出登录成功，2秒后跳转到首页", "success", 2000);
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
+    };
+
+    return {
+      handleLogout
+    };
   },
   components: {
     Dropdown,
