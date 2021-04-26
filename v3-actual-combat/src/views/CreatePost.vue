@@ -143,6 +143,7 @@ export default defineComponent({
       }
       return passed;
     };
+
     return {
       titleRules,
       titleVal,

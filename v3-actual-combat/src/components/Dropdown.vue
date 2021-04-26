@@ -15,8 +15,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from "vue";
+import { defineComponent, ref, watch, onUnmounted } from "vue";
 import useClickOutside from "@/hooks/useClickOutside";
+import mitt from "mitt";
+
+export const emitter = mitt();
 
 export default defineComponent({
   name: "Dropdown",
@@ -26,12 +29,26 @@ export default defineComponent({
       required: true
     }
   },
-  setup() {
+  emits: ["item-clicked"],
+  setup(props, context) {
     const isOpen = ref(false);
     const dropdownRef = ref<null | HTMLElement>(null);
     const toggleOpen = () => {
       isOpen.value = !isOpen.value;
     };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const dropDownItemClicked = (e: any) => {
+      console.log(e.props.yy);
+      if (e.props.closeAfterClick) {
+        isOpen.value = false;
+      }
+      context.emit("item-clicked", e);
+    };
+    emitter.on("dropdown-item-clicked", dropDownItemClicked);
+    onUnmounted(() => {
+      emitter.off("dropdown-item-clicked", dropDownItemClicked);
+    });
+
     const isClickOutside = useClickOutside(dropdownRef);
     watch(isClickOutside, () => {
       if (isOpen.value && isClickOutside.value) {
