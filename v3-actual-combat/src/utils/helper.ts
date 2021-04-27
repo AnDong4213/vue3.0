@@ -80,3 +80,18 @@ export function beforeUploadCheck(
     error
   };
 }
+
+export const arrToObj = <T extends { _id?: string }>(
+  arr: T[]
+): { [key: string]: T } => {
+  return arr.reduce((prev, current) => {
+    if (current._id) {
+      prev[current._id] = current;
+    }
+    return prev;
+  }, {} as { [key: string]: T });
+};
+
+export const objToArr = <V>(obj: { [key: string]: V }): V[] => {
+  return Object.keys(obj).map(key => obj[key]);
+};

@@ -38,7 +38,6 @@ export default defineComponent({
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const dropDownItemClicked = (e: any) => {
-      console.log(e.props.yy);
       if (e.props.closeAfterClick) {
         isOpen.value = false;
       }
