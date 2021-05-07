@@ -68,9 +68,11 @@ const asyncAndCommit = async (
   mutationName: string,
   commit: Commit,
   config: AxiosRequestConfig = { method: "get" },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraData?: any
 ) => {
   const { data } = await axios(url, config);
+  console.log("extraData", extraData);
   if (extraData) {
     commit(mutationName, { data, extraData });
   } else {
@@ -123,6 +125,7 @@ const store = createStore<GlobalDataProps>({
       state.error = e;
     },
     fetchCurrentUser(state, rawData) {
+      console.log("rawData", rawData);
       state.user = { isLogin: true, ...rawData.data };
     },
     login(state, rawData) {
@@ -197,11 +200,15 @@ const store = createStore<GlobalDataProps>({
         method: "delete"
       });
     },
-    loginAndFetch({ dispatch }, loginData) {
+    async loginAndFetch({ dispatch }, loginData) {
+      await dispatch("login", loginData);
+      return await dispatch("fetchCurrentUser");
+    }
+    /* loginAndFetch2({ dispatch }, loginData) {
       return dispatch("login", loginData).then(() => {
         return dispatch("fetchCurrentUser");
       });
-    }
+    } */
   },
   getters: {
     getColumnById: state => (id: string) => {

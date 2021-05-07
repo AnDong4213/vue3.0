@@ -5,6 +5,19 @@
            @modal-on-close="modalIsVisible = false"
            @modal-on-confirm="hideAndDelete"
            :visible="modalIsVisible" />
+    <nav aria-label="breadcrumb"
+         v-if="currentPost">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <router-link to="/">首页</router-link>
+        </li>
+        <li class="breadcrumb-item">
+          <router-link :to="`/column/${currentPost.column}`">专栏首页</router-link>
+        </li>
+        <li class="breadcrumb-item active"
+            aria-current="page">{{currentPost.title}}</li>
+      </ol>
+    </nav>
     <article class="mb-5 pb-3"
              v-if="currentPost">
       <img :src="currentImageUrl"
