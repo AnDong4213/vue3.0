@@ -1,9 +1,6 @@
 <template>
   <div class="create-post-page">
     <h4>新建文章</h4>
-    <!-- <input type="file"
-           name="file"
-           @change.prevent="handleFileChange" /> -->
     <Uploader action="/upload"
               :beforeUpload="uploadCheck"
               @file-uploaded="handleFileUploaded"
@@ -110,8 +107,7 @@ export default defineComponent({
           if (imageId) {
             newPost.image = imageId;
           }
-          // store.commit("createPost", newPost);
-          // router.push({ name: "column", params: { id: column } });
+
           const actionName = isEditMode ? "updatePost" : "createPost";
           const sendData = isEditMode
             ? {
@@ -150,13 +146,15 @@ export default defineComponent({
       contentVal,
       contentRules,
       onFormSubmit,
-      // handleFileChange
       uploadCheck,
       handleFileUploaded,
       isEditMode,
       uploadedData
     };
 
+    /*  <input type="file"
+           name="file"
+           @change.prevent="handleFileChange" /> */
     /* const handleFileChange = (e: Event) => {
       const target = e.target as HTMLInputElement;
       const files = Array.from(target.files as FileList);

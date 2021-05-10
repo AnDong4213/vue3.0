@@ -7,11 +7,12 @@
 import { ref, defineComponent } from "vue";
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { PieChart } from "echarts/charts";
+import { PieChart, LineChart } from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
   LegendComponent,
+  GridComponent,
   ToolboxComponent,
   DataZoomComponent,
   VisualMapComponent,
@@ -24,9 +25,11 @@ import VChart, { THEME_KEY } from "vue-echarts";
 use([
   CanvasRenderer,
   PieChart,
+  LineChart,
   TitleComponent,
   TooltipComponent,
   LegendComponent,
+  GridComponent,
   ToolboxComponent,
   DataZoomComponent,
   VisualMapComponent,
@@ -40,44 +43,68 @@ export default defineComponent({
     VChart
   },
   provide: {
-    [THEME_KEY]: "dark"
+    [THEME_KEY]: "light"
   },
   setup: () => {
     const option = ref({
       title: {
-        text: "Traffic Sources",
-        left: "center"
+        text: "折线图堆叠"
       },
       tooltip: {
-        trigger: "item",
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        trigger: "axis"
       },
       legend: {
-        orient: "vertical",
-        left: "left",
-        data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
+        data: ["邮件营销", "联盟广告", "视频广告", "直接访问", "搜索引擎"]
+      },
+      grid: {
+        left: "3%",
+        right: "4%",
+        bottom: "3%",
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      xAxis: {
+        type: "category",
+        boundaryGap: false,
+        data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+      },
+      yAxis: {
+        type: "category"
       },
       series: [
         {
-          name: "Traffic Sources-22",
-          type: "pie",
-          radius: "55%",
-          center: ["50%", "60%"],
-          data: [
-            { value: 335, name: "Direct" },
-            { value: 310, name: "Email" },
-            { value: 234, name: "Ad Networks" },
-            { value: 135, name: "Video Ads" },
-            { value: 1548, name: "Search Engines" }
-          ],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: "#fe2270",
-              textShadowColor: "#ff0"
-            }
-          }
+          name: "邮件营销",
+          type: "line",
+          stack: "总量",
+          data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+          name: "联盟广告",
+          type: "line",
+          stack: "总量",
+          data: [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+          name: "视频广告",
+          type: "line",
+          stack: "总量",
+          data: [150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+          name: "直接访问",
+          type: "line",
+          stack: "总量",
+          data: [320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+          name: "搜索引擎",
+          type: "line",
+          stack: "总量",
+          data: [82, 93, 90, 93, 129, 20, 10]
         }
       ]
     });
@@ -89,6 +116,6 @@ export default defineComponent({
 
 <style scoped>
 .chart {
-  height: 100vh;
+  height: 90vh;
 }
 </style>

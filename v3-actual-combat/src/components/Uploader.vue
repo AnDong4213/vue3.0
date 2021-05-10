@@ -55,6 +55,8 @@ export default defineComponent({
         if (newValue) {
           fileStatus.value = "success";
           uploadedData.value = newValue;
+        } else {
+          fileStatus.value = "ready";
         }
       }
     );

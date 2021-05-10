@@ -72,7 +72,6 @@ const asyncAndCommit = async (
   extraData?: any
 ) => {
   const { data } = await axios(url, config);
-  console.log("extraData", extraData);
   if (extraData) {
     commit(mutationName, { data, extraData });
   } else {
@@ -103,6 +102,9 @@ const store = createStore<GlobalDataProps>({
     fetchColumn(state, { data }) {
       state.columns.data[data._id] = data;
     },
+    updateColumn(state, { data }) {
+      state.columns.data[data._id] = data;
+    },
     fetchPosts(state, { data: rawData, extraData }) {
       const { data, loadedColumns } = state.posts;
       const listData = rawData.data.list as PostProps[];
@@ -125,7 +127,6 @@ const store = createStore<GlobalDataProps>({
       state.error = e;
     },
     fetchCurrentUser(state, rawData) {
-      console.log("rawData", rawData);
       state.user = { isLogin: true, ...rawData.data };
     },
     login(state, rawData) {
@@ -134,9 +135,13 @@ const store = createStore<GlobalDataProps>({
       localStorage.setItem("token", token);
       axios.defaults.headers.common.Authorization = `Bearer ${token}`;
     },
+    updateUser(state, { data }) {
+      state.user = { isLogin: true, ...data };
+    },
     logout(state) {
       state.token = "";
       window.localStorage.removeItem("token");
+      state.user = { isLogin: false };
       delete axios.defaults.headers.common.Authorization;
     }
   },
@@ -198,6 +203,18 @@ const store = createStore<GlobalDataProps>({
     deletePost({ commit }, id) {
       return asyncAndCommit(`/posts/${id}`, "deletePost", commit, {
         method: "delete"
+      });
+    },
+    updateColumn({ commit }, { id, payload }) {
+      return asyncAndCommit(`/columns/${id}`, "updateColumn", commit, {
+        method: "patch",
+        data: payload
+      });
+    },
+    updateUser({ commit }, { id, payload }) {
+      return asyncAndCommit(`/user/${id}`, "updateUser", commit, {
+        method: "patch",
+        data: payload
       });
     },
     async loginAndFetch({ dispatch }, loginData) {

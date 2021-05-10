@@ -25,8 +25,10 @@
             <router-link :to="`/column/${user.column}`"
                          class="dropdown-item">我的专栏</router-link>
           </dropdown-item>
-          <dropdown-item closeAfterClick><a href="#"
-               class="dropdown-item">编辑资料</a></dropdown-item>
+          <dropdown-item closeAfterClick>
+            <router-link to='/edit'
+                         class="dropdown-item">编辑资料</router-link>
+          </dropdown-item>
           <dropdown-item closeAfterClick><a href="#"
                class="dropdown-item"
                @click="handleLogout">退出登陆</a></dropdown-item>
