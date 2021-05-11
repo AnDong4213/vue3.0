@@ -7,8 +7,9 @@
 import { ref, defineComponent } from "vue";
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { PieChart, LineChart } from "echarts/charts";
+import { PieChart, LineChart, BarChart } from "echarts/charts";
 import {
+  DatasetComponent,
   TitleComponent,
   TooltipComponent,
   LegendComponent,
@@ -26,6 +27,8 @@ use([
   CanvasRenderer,
   PieChart,
   LineChart,
+  BarChart,
+  DatasetComponent,
   TitleComponent,
   TooltipComponent,
   LegendComponent,
@@ -37,41 +40,9 @@ use([
   CalendarComponent
 ]);
 
-let base = +new Date(1988, 9, 3);
-let base2 = +new Date(1988, 9, 3);
-
-const initDate = new Date(1988, 9, 3);
-const oneDay = 24 * 3600 * 1000;
-const one = [
-  initDate.getFullYear(),
-  initDate.getMonth() + 1,
-  initDate.getDate()
-].join("/");
-
-const data = [[one, Math.round(Math.random() * 300)]];
-const data2 = [[one, Math.round(Math.random() * 300)]];
-
-for (let i = 1; i < 2000; i++) {
-  const now = new Date((base += oneDay));
-  data.push([
-    [now.getFullYear(), now.getMonth() + 1, now.getDate()].join("/"),
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    Math.abs(Math.round((Math.random() - 0.5) * 20 + data[i - 1][1]))
-  ]);
-}
-for (let i = 1; i < 2000; i++) {
-  const now = new Date((base2 += oneDay));
-  data2.push([
-    [now.getFullYear(), now.getMonth() + 1, now.getDate()].join("/"),
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    Math.abs(Math.round((Math.random() - 0.5) * 200 + data[i - 1][1]))
-  ]);
-}
-
-// console.log("data", data);
-// console.log("data", data2);
+const series = Array(4)
+  .fill({})
+  .map(() => ({ type: "bar", seriesLayoutBy: "column" }));
 
 export default defineComponent({
   name: "Echarts",
@@ -83,72 +54,21 @@ export default defineComponent({
   },
   setup: () => {
     const option = ref({
-      title: {
-        left: "left",
-        text: "观看直播大数据量"
+      legend: {},
+      tooltip: {},
+      dataset: {
+        source: [
+          ["product", "2015", "2016", "2017", "2018"],
+          ["Matcha Latte", 43.3, 85.8, 93.7, 20],
+          ["Milk Tea", 83.1, 73.4, 55.1, 30],
+          ["Cheese Cocoa", 86.4, 65.2, 82.5, 40],
+          ["Walnut Brownie", 72.4, 53.9, 39.1, 50],
+          ["Walnut", 32.4, 13.9, 55, 60]
+        ]
       },
-      legend: {
-        data: [{ name: "进场观众" }, { name: "在线观看" }]
-      },
-      tooltip: {
-        trigger: "axis",
-        position: function(pt: any) {
-          return [pt[0], "10%"];
-        }
-      },
-      toolbox: {
-        feature: {
-          dataZoom: {
-            yAxisIndex: "none"
-          },
-          restore: {},
-          saveAsImage: {}
-        }
-      },
-      grid: {
-        show: true,
-        // backgroundColor: "",
-        tooltip: {
-          show: true
-        }
-      },
-      xAxis: {
-        type: "time",
-        boundaryGap: false
-      },
-      yAxis: {
-        type: "value",
-        boundaryGap: [0, "100%"]
-      },
-      dataZoom: [
-        {
-          type: "inside",
-          start: 0,
-          end: 20
-        },
-        {
-          start: 0,
-          end: 20
-        }
-      ],
-      series: [
-        {
-          name: "进场观众",
-          type: "line",
-          smooth: true,
-          symbol: "none",
-          areaStyle: {},
-          data: data
-        },
-        {
-          name: "在线观看",
-          type: "line",
-          smooth: true,
-          symbol: "none",
-          areaStyle: {},
-          data: data2
-        }
-      ]
+      xAxis: { type: "category" },
+      yAxis: {},
+      series: series
     });
 
     return { option };

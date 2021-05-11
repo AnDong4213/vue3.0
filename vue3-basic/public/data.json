@@ -1,0 +1,3414 @@
+{
+  "liveData": [
+    {
+      "minute_format": "202105110707",
+      "current_user_count": "2043",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "0",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110709",
+      "current_user_count": "2231",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3517",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110710",
+      "current_user_count": "2242",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1602",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110712",
+      "current_user_count": "2555",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3491",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110713",
+      "current_user_count": "2491",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3461",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110715",
+      "current_user_count": "2680",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3735",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110716",
+      "current_user_count": "2770",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3300",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110718",
+      "current_user_count": "2363",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3124",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110719",
+      "current_user_count": "2864",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2190",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110721",
+      "current_user_count": "3041",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2126",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110722",
+      "current_user_count": "2448",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4699",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110724",
+      "current_user_count": "1988",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1342",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110725",
+      "current_user_count": "2262",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2889",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110727",
+      "current_user_count": "2234",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2818",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110728",
+      "current_user_count": "2524",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3392",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110730",
+      "current_user_count": "2471",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3500",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110731",
+      "current_user_count": "2600",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3367",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110733",
+      "current_user_count": "2539",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1534",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110734",
+      "current_user_count": "2424",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2760",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110736",
+      "current_user_count": "2374",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2718",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110737",
+      "current_user_count": "2181",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1255",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110738",
+      "current_user_count": "3374",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4281",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110740",
+      "current_user_count": "5187",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "7352",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110742",
+      "current_user_count": "5537",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "8070",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110743",
+      "current_user_count": "5554",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "8526",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110745",
+      "current_user_count": "5781",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3818",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110746",
+      "current_user_count": "5635",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "8054",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110748",
+      "current_user_count": "4795",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5726",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110749",
+      "current_user_count": "4117",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5541",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110751",
+      "current_user_count": "3310",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4361",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110752",
+      "current_user_count": "3760",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2689",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110754",
+      "current_user_count": "3396",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4723",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110755",
+      "current_user_count": "3000",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3691",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110757",
+      "current_user_count": "3415",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4638",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110758",
+      "current_user_count": "3646",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4517",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110800",
+      "current_user_count": "3359",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1860",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110801",
+      "current_user_count": "2806",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3227",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110803",
+      "current_user_count": "2904",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1852",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110804",
+      "current_user_count": "2989",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5800",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110806",
+      "current_user_count": "2942",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3554",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110807",
+      "current_user_count": "2803",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1915",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110809",
+      "current_user_count": "2666",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3416",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110810",
+      "current_user_count": "2742",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3634",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110812",
+      "current_user_count": "2589",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1782",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110813",
+      "current_user_count": "2330",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2795",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110815",
+      "current_user_count": "2287",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2575",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110816",
+      "current_user_count": "2511",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3053",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110818",
+      "current_user_count": "2362",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1415",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110819",
+      "current_user_count": "2266",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2489",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110821",
+      "current_user_count": "1818",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2170",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110822",
+      "current_user_count": "1934",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2370",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110824",
+      "current_user_count": "1815",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2302",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110825",
+      "current_user_count": "1556",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "960",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110826",
+      "current_user_count": "1702",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1986",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110828",
+      "current_user_count": "1686",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2023",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110830",
+      "current_user_count": "2102",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2685",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110831",
+      "current_user_count": "2189",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1651",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110833",
+      "current_user_count": "2269",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1651",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110834",
+      "current_user_count": "2427",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4322",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110836",
+      "current_user_count": "2444",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2780",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110837",
+      "current_user_count": "2265",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1348",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110839",
+      "current_user_count": "2283",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2649",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110840",
+      "current_user_count": "2069",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2382",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110842",
+      "current_user_count": "2109",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2414",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110843",
+      "current_user_count": "1988",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1082",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110845",
+      "current_user_count": "2190",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2479",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110846",
+      "current_user_count": "2097",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2378",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110848",
+      "current_user_count": "2969",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3658",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110849",
+      "current_user_count": "2826",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3327",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110851",
+      "current_user_count": "2536",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1433",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110852",
+      "current_user_count": "2486",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2828",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110854",
+      "current_user_count": "2588",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2734",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110855",
+      "current_user_count": "2318",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2166",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110857",
+      "current_user_count": "2021",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1036",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110858",
+      "current_user_count": "2358",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3511",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110900",
+      "current_user_count": "2425",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1382",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110901",
+      "current_user_count": "2342",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2476",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110903",
+      "current_user_count": "2253",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2507",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110904",
+      "current_user_count": "2294",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1258",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110905",
+      "current_user_count": "2465",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2827",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110907",
+      "current_user_count": "2655",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1704",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110909",
+      "current_user_count": "2891",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5392",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110910",
+      "current_user_count": "2982",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1925",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110912",
+      "current_user_count": "3185",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "6138",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110914",
+      "current_user_count": "3087",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1865",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110915",
+      "current_user_count": "2974",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3957",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110916",
+      "current_user_count": "3052",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2157",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110918",
+      "current_user_count": "3083",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3956",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110919",
+      "current_user_count": "3419",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4386",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110921",
+      "current_user_count": "3414",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4312",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110922",
+      "current_user_count": "3398",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3984",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110924",
+      "current_user_count": "3154",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1914",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110925",
+      "current_user_count": "3195",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3996",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110927",
+      "current_user_count": "3159",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3978",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110928",
+      "current_user_count": "3087",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1942",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110930",
+      "current_user_count": "3117",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1967",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110931",
+      "current_user_count": "3369",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "6754",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110933",
+      "current_user_count": "3350",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4137",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110934",
+      "current_user_count": "3411",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2136",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110936",
+      "current_user_count": "3530",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4242",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110937",
+      "current_user_count": "3217",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4018",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110939",
+      "current_user_count": "2848",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3772",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110940",
+      "current_user_count": "2736",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3580",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110942",
+      "current_user_count": "2594",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3272",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110944",
+      "current_user_count": "2687",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1734",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110945",
+      "current_user_count": "2979",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2037",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110946",
+      "current_user_count": "2866",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3549",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110948",
+      "current_user_count": "2683",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3393",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110949",
+      "current_user_count": "2566",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3017",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110951",
+      "current_user_count": "2710",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3386",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110952",
+      "current_user_count": "3279",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4184",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110954",
+      "current_user_count": "3237",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2963",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110955",
+      "current_user_count": "3009",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2839",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110957",
+      "current_user_count": "3164",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4025",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105110958",
+      "current_user_count": "3250",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4195",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111000",
+      "current_user_count": "3233",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4282",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111002",
+      "current_user_count": "2609",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1591",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111003",
+      "current_user_count": "2682",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3465",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111004",
+      "current_user_count": "2476",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3090",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111006",
+      "current_user_count": "2448",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1596",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111008",
+      "current_user_count": "2222",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3270",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111009",
+      "current_user_count": "2308",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2442",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111010",
+      "current_user_count": "2300",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2349",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111012",
+      "current_user_count": "2213",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2995",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111014",
+      "current_user_count": "2194",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1594",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111015",
+      "current_user_count": "2236",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2565",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111017",
+      "current_user_count": "2356",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3659",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111018",
+      "current_user_count": "2390",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "966",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111019",
+      "current_user_count": "2389",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3867",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111021",
+      "current_user_count": "2294",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2533",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111023",
+      "current_user_count": "2268",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1699",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111024",
+      "current_user_count": "2483",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3901",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111026",
+      "current_user_count": "2334",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4744",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111028",
+      "current_user_count": "2109",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3077",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111030",
+      "current_user_count": "1834",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1448",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111031",
+      "current_user_count": "2008",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3026",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111033",
+      "current_user_count": "1916",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "696",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111034",
+      "current_user_count": "1948",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2781",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111036",
+      "current_user_count": "1682",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1159",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111037",
+      "current_user_count": "1656",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1192",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111039",
+      "current_user_count": "2004",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3933",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111041",
+      "current_user_count": "1982",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1554",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111042",
+      "current_user_count": "2239",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3248",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111044",
+      "current_user_count": "2194",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "832",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111045",
+      "current_user_count": "2257",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3579",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111047",
+      "current_user_count": "2097",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1497",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111048",
+      "current_user_count": "2149",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2800",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111050",
+      "current_user_count": "2032",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1335",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111051",
+      "current_user_count": "1953",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2622",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111052",
+      "current_user_count": "1817",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "651",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111054",
+      "current_user_count": "1797",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2390",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111055",
+      "current_user_count": "1714",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "663",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111056",
+      "current_user_count": "1802",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3029",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111059",
+      "current_user_count": "1765",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1100",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111100",
+      "current_user_count": "1767",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2132",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111102",
+      "current_user_count": "1700",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1094",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111103",
+      "current_user_count": "1648",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2217",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111105",
+      "current_user_count": "1674",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1270",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111106",
+      "current_user_count": "1758",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2583",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111108",
+      "current_user_count": "1782",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1916",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111109",
+      "current_user_count": "1967",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1546",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111110",
+      "current_user_count": "2094",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3429",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111112",
+      "current_user_count": "2235",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1829",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111113",
+      "current_user_count": "2269",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3653",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111115",
+      "current_user_count": "2246",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1888",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111116",
+      "current_user_count": "2393",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3079",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111118",
+      "current_user_count": "2526",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3306",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111119",
+      "current_user_count": "2484",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2010",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111120",
+      "current_user_count": "2622",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4412",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111123",
+      "current_user_count": "2637",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2270",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111124",
+      "current_user_count": "2562",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4197",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111126",
+      "current_user_count": "2547",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2169",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111127",
+      "current_user_count": "2492",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4048",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111129",
+      "current_user_count": "2249",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1842",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111130",
+      "current_user_count": "2351",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2334",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111131",
+      "current_user_count": "2432",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4599",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111133",
+      "current_user_count": "2338",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2251",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111135",
+      "current_user_count": "2336",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2204",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111136",
+      "current_user_count": "2285",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2937",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111138",
+      "current_user_count": "2140",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2754",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111139",
+      "current_user_count": "2187",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3434",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111141",
+      "current_user_count": "2502",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2248",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111142",
+      "current_user_count": "2454",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2294",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111143",
+      "current_user_count": "2389",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4206",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111145",
+      "current_user_count": "2013",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1727",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111146",
+      "current_user_count": "1967",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1715",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111147",
+      "current_user_count": "2202",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1896",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111148",
+      "current_user_count": "1881",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1623",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111149",
+      "current_user_count": "2115",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4346",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111153",
+      "current_user_count": "2530",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "6580",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111156",
+      "current_user_count": "1842",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1591",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111157",
+      "current_user_count": "1942",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3266",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111159",
+      "current_user_count": "1984",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1701",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111200",
+      "current_user_count": "1886",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1699",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111201",
+      "current_user_count": "2008",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3450",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111203",
+      "current_user_count": "1849",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2966",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111205",
+      "current_user_count": "1625",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1332",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111206",
+      "current_user_count": "1566",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1280",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111207",
+      "current_user_count": "1538",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2356",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111209",
+      "current_user_count": "1585",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2524",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111211",
+      "current_user_count": "1557",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1224",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111212",
+      "current_user_count": "1656",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2479",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111214",
+      "current_user_count": "1661",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "591",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111215",
+      "current_user_count": "1540",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2292",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111217",
+      "current_user_count": "1356",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1486",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111218",
+      "current_user_count": "1607",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1686",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111220",
+      "current_user_count": "1695",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1243",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111221",
+      "current_user_count": "1868",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2806",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111223",
+      "current_user_count": "1808",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1412",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111224",
+      "current_user_count": "2171",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3469",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111226",
+      "current_user_count": "2329",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2018",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111227",
+      "current_user_count": "2318",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3036",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111228",
+      "current_user_count": "2157",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1794",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111230",
+      "current_user_count": "2120",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3582",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111232",
+      "current_user_count": "2135",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2746",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111233",
+      "current_user_count": "2277",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2004",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111234",
+      "current_user_count": "2459",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3916",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111236",
+      "current_user_count": "2331",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1863",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111237",
+      "current_user_count": "2486",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3141",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111239",
+      "current_user_count": "3104",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5209",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111241",
+      "current_user_count": "3454",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1578",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111242",
+      "current_user_count": "3376",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "7438",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111244",
+      "current_user_count": "3146",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1371",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111245",
+      "current_user_count": "3591",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "6396",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111247",
+      "current_user_count": "3573",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5848",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111248",
+      "current_user_count": "3637",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1402",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111249",
+      "current_user_count": "3485",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5544",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111251",
+      "current_user_count": "3413",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2826",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111252",
+      "current_user_count": "3384",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5364",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111254",
+      "current_user_count": "3161",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2599",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111255",
+      "current_user_count": "3517",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5529",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111257",
+      "current_user_count": "3721",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1571",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111258",
+      "current_user_count": "4104",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "7069",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111300",
+      "current_user_count": "4311",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "7706",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111302",
+      "current_user_count": "4117",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1629",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111303",
+      "current_user_count": "3616",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5366",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111305",
+      "current_user_count": "2991",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2172",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111306",
+      "current_user_count": "3031",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4619",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111307",
+      "current_user_count": "2997",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3438",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111309",
+      "current_user_count": "2669",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2062",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111310",
+      "current_user_count": "2426",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3772",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111312",
+      "current_user_count": "2414",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "972",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111314",
+      "current_user_count": "2894",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5630",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111315",
+      "current_user_count": "3114",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2675",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111316",
+      "current_user_count": "3168",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2703",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111318",
+      "current_user_count": "2841",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3450",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111319",
+      "current_user_count": "3154",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "5418",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111321",
+      "current_user_count": "2841",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2377",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111322",
+      "current_user_count": "2769",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4537",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111324",
+      "current_user_count": "2594",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2079",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111325",
+      "current_user_count": "2356",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3887",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111327",
+      "current_user_count": "2401",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2083",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111328",
+      "current_user_count": "2569",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4397",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111330",
+      "current_user_count": "2654",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2573",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111331",
+      "current_user_count": "2731",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4550",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111333",
+      "current_user_count": "2405",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2120",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111334",
+      "current_user_count": "2080",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1755",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111336",
+      "current_user_count": "2006",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2609",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111337",
+      "current_user_count": "1946",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2882",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111339",
+      "current_user_count": "1700",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1923",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111340",
+      "current_user_count": "1696",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1964",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111343",
+      "current_user_count": "1698",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2101",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111344",
+      "current_user_count": "1737",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "733",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111345",
+      "current_user_count": "2063",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "4356",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111347",
+      "current_user_count": "2171",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1887",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111348",
+      "current_user_count": "2151",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3448",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111350",
+      "current_user_count": "1727",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1451",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111351",
+      "current_user_count": "1817",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1407",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111352",
+      "current_user_count": "1757",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2810",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111354",
+      "current_user_count": "1588",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1225",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111355",
+      "current_user_count": "1818",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2892",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111357",
+      "current_user_count": "1736",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1468",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111358",
+      "current_user_count": "1889",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2993",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111400",
+      "current_user_count": "1908",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1714",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111402",
+      "current_user_count": "1813",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1383",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111403",
+      "current_user_count": "1603",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1558",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111404",
+      "current_user_count": "1391",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2151",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111406",
+      "current_user_count": "1222",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1278",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111407",
+      "current_user_count": "1274",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1090",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111409",
+      "current_user_count": "1389",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2180",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111411",
+      "current_user_count": "1347",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1045",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111412",
+      "current_user_count": "1294",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2042",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111414",
+      "current_user_count": "1313",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1621",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111415",
+      "current_user_count": "1406",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1155",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111416",
+      "current_user_count": "1392",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1236",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111418",
+      "current_user_count": "1578",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2784",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111420",
+      "current_user_count": "1572",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1537",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111421",
+      "current_user_count": "1530",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2652",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111423",
+      "current_user_count": "1536",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1306",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111424",
+      "current_user_count": "1562",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1916",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111425",
+      "current_user_count": "1429",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2217",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111428",
+      "current_user_count": "1345",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "531",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111429",
+      "current_user_count": "1375",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2281",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111430",
+      "current_user_count": "1589",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2341",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111432",
+      "current_user_count": "1491",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1300",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111433",
+      "current_user_count": "1704",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2267",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111434",
+      "current_user_count": "1633",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1429",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111436",
+      "current_user_count": "1440",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2352",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111438",
+      "current_user_count": "1354",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1071",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111439",
+      "current_user_count": "1297",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1453",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111440",
+      "current_user_count": "1205",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1770",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111443",
+      "current_user_count": "1133",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "409",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111444",
+      "current_user_count": "1191",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1862",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111445",
+      "current_user_count": "1250",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1041",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111446",
+      "current_user_count": "1257",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1961",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111448",
+      "current_user_count": "1128",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1391",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111450",
+      "current_user_count": "1206",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1002",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111451",
+      "current_user_count": "1170",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "937",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111452",
+      "current_user_count": "1092",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2190",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111454",
+      "current_user_count": "1003",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "819",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111456",
+      "current_user_count": "1095",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "880",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111457",
+      "current_user_count": "1184",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2508",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111459",
+      "current_user_count": "1116",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "974",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111500",
+      "current_user_count": "1097",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1059",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111502",
+      "current_user_count": "1234",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1119",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111503",
+      "current_user_count": "1533",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3480",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111505",
+      "current_user_count": "1483",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1405",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111506",
+      "current_user_count": "1480",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1372",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111507",
+      "current_user_count": "1498",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1390",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111509",
+      "current_user_count": "1529",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3375",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111511",
+      "current_user_count": "1631",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1616",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111512",
+      "current_user_count": "1490",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2107",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111514",
+      "current_user_count": "1446",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1277",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111515",
+      "current_user_count": "1474",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1989",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111516",
+      "current_user_count": "1318",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1245",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111517",
+      "current_user_count": "1356",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2492",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111520",
+      "current_user_count": "1510",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2000",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111521",
+      "current_user_count": "1413",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1255",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111522",
+      "current_user_count": "1310",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1682",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111524",
+      "current_user_count": "1356",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2467",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111526",
+      "current_user_count": "1316",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1567",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111527",
+      "current_user_count": "1267",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1118",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111529",
+      "current_user_count": "1300",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1679",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111530",
+      "current_user_count": "1390",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1352",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111531",
+      "current_user_count": "1342",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1196",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111532",
+      "current_user_count": "1424",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3280",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111535",
+      "current_user_count": "1557",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "1454",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111536",
+      "current_user_count": "1688",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "3878",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111539",
+      "current_user_count": "1567",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2151",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111540",
+      "current_user_count": "1440",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "2540",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    },
+    {
+      "minute_format": "202105111543",
+      "current_user_count": "1385",
+      "leave_user_count": "0",
+      "like_during": "0",
+      "sales_during": "0",
+      "total_user_during": "628",
+      "fan_ticket_during": "0",
+      "gift_uv_count_during": "0"
+    }
+  ]
+}

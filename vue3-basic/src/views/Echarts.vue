@@ -71,7 +71,7 @@ for (let i = 1; i < 2000; i++) {
 }
 
 // console.log("data", data);
-// console.log("data", data2);
+// console.log("data2", data2);
 
 export default defineComponent({
   name: "Echarts",
