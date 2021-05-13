@@ -1,7 +1,7 @@
 import { createStore, Commit } from "vuex";
 import axios, { AxiosRequestConfig } from "axios";
 import { arrToObj, objToArr } from "@/utils/helper";
-export interface ResponseType<P = Record<string, never>> {
+export interface ResponseType<P> {
   code: number;
   msg: string;
   data: P;
@@ -47,12 +47,12 @@ interface ListProps<P> {
 }
 export interface GlobalColumnsProps {
   data: ListProps<ColumnProps>;
-  currentPage: number;
-  total?: number;
+  loaded: boolean;
 }
 export interface GlobalPostsProps {
   data: ListProps<PostProps>;
-  loadedColumns: ListProps<{ total?: number; currentPage?: number }>;
+  loadedColumns: string[];
+  loadedDetails: string[];
 }
 export interface GlobalDataProps {
   token: string;
@@ -68,6 +68,7 @@ const asyncAndCommit = async (
   mutationName: string,
   commit: Commit,
   config: AxiosRequestConfig = { method: "get" },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraData?: any
 ) => {
   const { data } = await axios(url, config);
@@ -83,8 +84,8 @@ const store = createStore<GlobalDataProps>({
     token: localStorage.getItem("token") || "",
     error: { status: false },
     loading: false,
-    columns: { data: {}, currentPage: 0 },
-    posts: { data: {}, loadedColumns: {} },
+    columns: { data: {}, loaded: false },
+    posts: { data: {}, loadedColumns: [], loadedDetails: [] },
     user: { isLogin: false }
   },
   mutations: {
@@ -93,11 +94,9 @@ const store = createStore<GlobalDataProps>({
     },
     fetchColumns(state, rawData) {
       const { data } = state.columns;
-      const { list, count, currentPage } = rawData.data;
       state.columns = {
-        data: { ...data, ...arrToObj(list) },
-        currentPage: currentPage * 1,
-        total: count
+        data: { ...data, ...arrToObj(rawData.data.list) },
+        loaded: true
       };
     },
     fetchColumn(state, { data }) {
@@ -108,13 +107,9 @@ const store = createStore<GlobalDataProps>({
     },
     fetchPosts(state, { data: rawData, extraData }) {
       const { data, loadedColumns } = state.posts;
-      const { list, count, currentPage } = rawData.data;
-      const listData = list as PostProps[];
+      const listData = rawData.data.list as PostProps[];
       state.posts.data = { ...data, ...arrToObj(listData) };
-      loadedColumns[extraData] = {
-        total: count,
-        currentPage
-      };
+      state.posts.loadedColumns = [...loadedColumns, extraData];
     },
     fetchPost(state, { data }) {
       state.posts.data[data._id] = data;
@@ -145,20 +140,15 @@ const store = createStore<GlobalDataProps>({
     },
     logout(state) {
       state.token = "";
+      window.localStorage.removeItem("token");
       state.user = { isLogin: false };
-      localStorage.removeItem("token");
       delete axios.defaults.headers.common.Authorization;
     }
   },
   actions: {
-    fetchColumns({ commit, state }, params = {}) {
-      const { currentPage = 1, pageSize = 5 } = params;
-      if (state.columns.currentPage < currentPage) {
-        return asyncAndCommit(
-          `/columns?currentPage=${currentPage}&pageSize=${pageSize}`,
-          "fetchColumns",
-          commit
-        );
+    fetchColumns({ commit, state }) {
+      if (!state.columns.loaded) {
+        return asyncAndCommit("/columns", "fetchColumns", commit);
       }
     },
     fetchColumn({ commit, state }, cid) {
@@ -167,17 +157,11 @@ const store = createStore<GlobalDataProps>({
         return asyncAndCommit(`/columns/${cid}`, "fetchColumn", commit);
       }
     },
-    fetchPosts({ commit, state }, params = {}) {
-      const { cid, currentPage = 1, pageSize = 5 } = params;
+    fetchPosts({ commit, state }, cid) {
       const { loadedColumns } = state.posts;
-      const loadedCurentPage =
-        (loadedColumns[cid] && loadedColumns[cid].currentPage) || 0;
-      if (
-        !Object.keys(loadedColumns).includes(cid) ||
-        loadedCurentPage < currentPage
-      ) {
+      if (!loadedColumns.includes(cid)) {
         return asyncAndCommit(
-          `/columns/${cid}/posts?currentPage=${currentPage}&pageSize=${pageSize}`,
+          `/columns/${cid}/posts`,
           "fetchPosts",
           commit,
           { method: "get" },
@@ -233,11 +217,15 @@ const store = createStore<GlobalDataProps>({
         data: payload
       });
     },
-    loginAndFetch({ dispatch }, loginData) {
+    async loginAndFetch({ dispatch }, loginData) {
+      await dispatch("login", loginData);
+      return await dispatch("fetchCurrentUser");
+    }
+    /* loginAndFetch2({ dispatch }, loginData) {
       return dispatch("login", loginData).then(() => {
         return dispatch("fetchCurrentUser");
       });
-    }
+    } */
   },
   getters: {
     getColumnById: state => (id: string) => {
@@ -245,7 +233,7 @@ const store = createStore<GlobalDataProps>({
     },
     getPostsByCid: state => (cid: string) => {
       return objToArr(state.posts.data)
-        .filter(post => post.column === cid)
+        .filter((post: any) => post.column === cid)
         .sort((a, b) => {
           return (
             new Date(b.createdAt || 0).getTime() -
@@ -255,20 +243,6 @@ const store = createStore<GlobalDataProps>({
     },
     getCurrentPost: state => (id: string) => {
       return state.posts.data[id];
-    },
-    getPostsCountByCid: state => (cid: string) => {
-      if (state.posts.loadedColumns[cid]) {
-        return state.posts.loadedColumns[cid].total;
-      } else {
-        return 0;
-      }
-    },
-    getPostsCurrentPageByCid: state => (cid: string) => {
-      if (state.posts.loadedColumns[cid]) {
-        return state.posts.loadedColumns[cid].currentPage;
-      } else {
-        return 0;
-      }
     }
   }
 });

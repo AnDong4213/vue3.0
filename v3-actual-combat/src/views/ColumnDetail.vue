@@ -13,6 +13,11 @@
       </div>
     </div>
     <post-list :list="list"></post-list>
+    <button class="btn btn-outline-primary mt-2 mb-5 mx-auto btn-block w-25"
+            @click="loadMorePage"
+            v-if="!isLastPage">
+      加载更多
+    </button>
   </div>
 </template>
 
@@ -22,6 +27,7 @@ import { useRoute } from "vue-router";
 import { useStore } from "vuex";
 import { GlobalDataProps, ColumnProps } from "@/store";
 import { generateFitUrl } from "@/utils/helper";
+import useLoadMore from "@/hooks/useLoadMore";
 import PostList from "@/components/PostList.vue";
 
 export default defineComponent({
@@ -34,7 +40,7 @@ export default defineComponent({
     const currentId = route.params.id;
     onMounted(() => {
       store.dispatch("fetchColumn", currentId);
-      store.dispatch("fetchPosts", currentId);
+      store.dispatch("fetchPosts", { cid: currentId });
     });
     // const column = computed(() => store.getters.getColumnById(currentId));
     const column = computed(() => {
@@ -47,9 +53,21 @@ export default defineComponent({
       return selectColumn;
     });
     const list = computed(() => store.getters.getPostsByCid(currentId));
+
+    const count = computed(() => store.getters.getPostsCountByCid(currentId));
+    const currentPage = computed(() =>
+      store.getters.getPostsCurrentPageByCid(currentId)
+    );
+    const { loadMorePage, isLastPage } = useLoadMore("fetchPosts", count, {
+      currentPage: currentPage.value,
+      cid: currentId
+    });
+
     return {
       column,
-      list
+      list,
+      loadMorePage,
+      isLastPage
     };
   }
 });

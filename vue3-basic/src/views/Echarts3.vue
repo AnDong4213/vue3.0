@@ -132,6 +132,12 @@ const option2 = {
         opacity: 0.2
       },
       color: "#fe2270",
+      emphasis: {
+        scale: false
+      },
+      lineStyle: {
+        width: 1
+      },
       encode: {
         x: "minute_format",
         y: "current_user_count",
@@ -148,6 +154,12 @@ const option2 = {
         opacity: 0.4
       },
       color: "#41B883",
+      emphasis: {
+        scale: false
+      },
+      lineStyle: {
+        width: 1
+      },
       encode: {
         x: "minute_format",
         y: "total_user_during",

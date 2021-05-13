@@ -8,6 +8,7 @@ import CreatePost from "@/views/CreatePost.vue";
 import PostDetail from "@/views/PostDetail.vue";
 import EditProfile from "@/views/EditProfile.vue";
 import Signup from "@/views/Signup.vue";
+import NotFound from "@/views/NotFound.vue";
 import Proxy from "@/views/Proxy.vue";
 
 import axios from "axios";
@@ -63,7 +64,8 @@ const router = createRouter({
       path: "/proxy",
       name: "proxy",
       component: Proxy
-    }
+    },
+    { path: "/:pathMatch(.*)*", name: "not-found", component: NotFound }
   ]
 });
 

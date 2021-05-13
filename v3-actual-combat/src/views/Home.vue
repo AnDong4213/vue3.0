@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <section class="py-5 text-center container">
+    <section class="text-center container">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <img src="../assets/callout.svg"
@@ -14,8 +14,14 @@
         </div>
       </div>
     </section>
-    <h4 class="font-weight-bold text-center">发现精彩</h4>
+    <h4 class="font-weight-bold text-center mb-4">发现精彩</h4>
     <column-list :list="list" />
+
+    <button class="btn btn-outline-primary mt-2 mb-5 mx-auto btn-block w-25"
+            @click="loadMorePage"
+            v-if="!isLastPage">
+      加载更多
+    </button>
   </div>
 </template>
 
@@ -25,19 +31,31 @@ import { useStore } from "vuex";
 import ColumnList from "@/components/ColumnList.vue";
 import { GlobalDataProps } from "@/store";
 import { objToArr } from "@/utils/helper";
+import useLoadMore from "@/hooks/useLoadMore";
 
 export default defineComponent({
   name: "Home",
   setup() {
     const store = useStore<GlobalDataProps>();
+    const totalColumns = computed(() => store.state.columns.total || 0);
+    const currentPage = computed(() => store.state.columns.currentPage || 0);
+
     const list = computed(() => objToArr(store.state.columns.data));
+    const { loadMorePage, isLastPage } = useLoadMore(
+      "fetchColumns",
+      totalColumns,
+      { currentPage: currentPage.value }
+    );
 
     onMounted(() => {
       store.dispatch("fetchColumns");
     });
 
     return {
-      list
+      list,
+      loadMorePage,
+      isLastPage,
+      totalColumns
     };
   },
   components: {
