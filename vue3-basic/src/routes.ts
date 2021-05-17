@@ -4,6 +4,8 @@ import Home from "@/views/Home.vue";
 import Echarts from "@/views/Echarts.vue";
 import Echarts2 from "@/views/Echarts2.vue";
 import Echarts3 from "@/views/Echarts3.vue";
+import EchartsMap from "@/views/EchartsMap.vue";
+import EchartsMap2 from "@/views/EchartsMap2.vue";
 
 const routerHistory = createWebHistory();
 const router = createRouter({
@@ -34,6 +36,22 @@ const router = createRouter({
       path: "/echart3",
       name: "echart3",
       component: Echarts3,
+      meta: {
+        requiredLogin: true
+      }
+    },
+    {
+      path: "/map",
+      name: "map",
+      component: EchartsMap,
+      meta: {
+        requiredLogin: true
+      }
+    },
+    {
+      path: "/map2",
+      name: "map2",
+      component: EchartsMap2,
       meta: {
         requiredLogin: true
       }
