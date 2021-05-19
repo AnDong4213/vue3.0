@@ -48,6 +48,8 @@ export default defineComponent({
     );
 
     onMounted(() => {
+      console.log(999);
+
       store.dispatch("fetchColumns");
     });
 
