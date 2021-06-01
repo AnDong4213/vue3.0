@@ -20,13 +20,13 @@
     <button class="btn btn-outline-primary mt-2 mb-5 mx-auto btn-block w-25"
             @click="loadMorePage"
             v-if="!isLastPage">
-      加载更多
+      加载更多-1
     </button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, onMounted } from "vue";
+import { defineComponent, computed, onMounted, watch } from "vue";
 import { useStore } from "vuex";
 import ColumnList from "@/components/ColumnList.vue";
 import { GlobalDataProps } from "@/store";
@@ -41,6 +41,10 @@ export default defineComponent({
     const currentPage = computed(() => store.state.columns.currentPage || 0);
 
     const list = computed(() => objToArr(store.state.columns.data));
+    /* watch(list, (newValue, oldValue) => {
+      console.log("newValue", newValue);
+      console.log("oldValue", oldValue);
+    }); */
     const { loadMorePage, isLastPage } = useLoadMore(
       "fetchColumns",
       totalColumns,
@@ -48,8 +52,6 @@ export default defineComponent({
     );
 
     onMounted(() => {
-      console.log(999);
-
       store.dispatch("fetchColumns");
     });
 

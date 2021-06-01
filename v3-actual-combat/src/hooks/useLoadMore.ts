@@ -10,11 +10,11 @@ interface LoadPrams {
 const useLoadMore = (
   actionName: string,
   total: ComputedRef<number>,
-  params: LoadPrams = {},
-  pageSize = 5
+  params: LoadPrams = {}
 ): any => {
   const store = useStore();
   const currentPage = ref((params && params.currentPage) || 1);
+  const pageSize = ref((params && params.pageSize) || 5);
   const requestParams = computed(() => {
     return {
       ...params,
@@ -29,7 +29,7 @@ const useLoadMore = (
   };
 
   const isLastPage = computed(() => {
-    return Math.ceil((total.value || 1) / pageSize) === currentPage.value;
+    return Math.floor((total.value || 1) / pageSize.value) < currentPage.value;
   });
 
   return {

@@ -83,7 +83,7 @@ const store = createStore<GlobalDataProps>({
     token: localStorage.getItem("token") || "",
     error: { status: false },
     loading: false,
-    columns: { data: {}, currentPage: 0 },
+    columns: { data: {}, currentPage: 0, total: 0 },
     posts: { data: {}, loadedColumns: {} },
     user: { isLogin: false }
   },

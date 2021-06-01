@@ -16,7 +16,7 @@
     <button class="btn btn-outline-primary mt-2 mb-5 mx-auto btn-block w-25"
             @click="loadMorePage"
             v-if="!isLastPage">
-      加载更多
+      加载更多--2
     </button>
   </div>
 </template>

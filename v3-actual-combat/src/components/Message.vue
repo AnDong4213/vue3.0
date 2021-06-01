@@ -4,12 +4,15 @@
          :class="classObject"
          v-if="isVisible">
       <span>{{message}}</span>
-      <button type="button"
+      <!-- <button type="button"
               class="close"
               aria-label="Close"
               @click.prevent="hide">
         <span aria-hidden="true">&times;</span>
-      </button>
+      </button> -->
+      <button type="button"
+              class="btn-close"
+              aria-label="Close"></button>
     </div>
   </teleport>
 </template>
