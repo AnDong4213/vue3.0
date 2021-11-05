@@ -68,6 +68,7 @@ const asyncAndCommit = async (
   mutationName: string,
   commit: Commit,
   config: AxiosRequestConfig = { method: "get" },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraData?: any
 ) => {
   const { data } = await axios(url, config);
@@ -169,6 +170,7 @@ const store = createStore<GlobalDataProps>({
     },
     fetchPosts({ commit, state }, params = {}) {
       const { cid, currentPage = 1, pageSize = 5 } = params;
+      console.log("state.posts", state.posts);
       const { loadedColumns } = state.posts;
       const loadedCurentPage =
         (loadedColumns[cid] && loadedColumns[cid].currentPage) || 0;

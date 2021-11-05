@@ -1,7 +1,20 @@
 <template>
-  <div>Proxy--{{map.get("count").value}}</div>
-  <h1 ref="root1">root</h1>
-  <proxy-child />
+  <div>
+    <div>Proxy--{{map.get("count").value}}</div>
+    <h1 ref="root1"
+        @click="testrender ='呵呵呵'">root--{{testrender}}</h1>
+    <proxy-child :testrender='testrender'>
+      <div class="slot-test">
+        <p>kkk </p>
+      </div>
+      <template v-slot:header>
+        <h1>Here might be a page title</h1>
+      </template>
+      <template #footer>
+        <p>Here's some footer info</p>
+      </template>
+    </proxy-child>
+  </div>
 </template>
 
 <script lang="ts">
@@ -16,6 +29,7 @@ export default defineComponent({
       console.log("Proxy");
     };
     const root1 = ref();
+    const testrender = ref("哈哈");
 
     onMounted(() => {
       handleProxy();
@@ -35,7 +49,8 @@ export default defineComponent({
 
     return {
       map,
-      root1
+      root1,
+      testrender
     };
   },
   components: {
