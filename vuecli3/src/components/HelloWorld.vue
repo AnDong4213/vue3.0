@@ -11,6 +11,42 @@
                active-color="#13ce66"
                inactive-color="#ff4949">
     </el-switch>
+
+    <div class="router-link">
+      <div>
+        <router-link to='/axios'>axios</router-link>
+      </div>
+      <div>
+        <router-link to='/echarts'>echarts</router-link>
+      </div>
+      <div>
+        <router-link to='/model'>model</router-link>
+      </div>
+      <div>
+        <router-link to='/test'>test</router-link>
+      </div>
+      <div>
+        <router-link to='/mixins'>mixins</router-link>
+      </div>
+      <div>
+        <router-link to='/other'>other</router-link>
+      </div>
+      <div>
+        <router-link to='/eventbus'>eventbus</router-link>
+      </div>
+      <div>
+        <router-link to='/tree'>tree</router-link>
+      </div>
+      <div>
+        <router-link to='/docs'>docs</router-link>
+      </div>
+      <div>
+        <router-link to='/docs2'>docs2</router-link>
+      </div>
+      <div>
+        <router-link to='/introjs'>introJs</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -134,7 +170,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 h1 {
   margin: 40px 0 0;
   cursor: pointer;
@@ -149,5 +185,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.router-link {
+  display: flex;
+  div {
+    margin: 10px;
+  }
 }
 </style>

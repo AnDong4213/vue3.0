@@ -14,6 +14,7 @@ import EventBus from "@/components/event-bus";
 import Tree from "@/components/tree";
 import Docs from "@/components/docs";
 import Docs2 from "@/components/docs2";
+import introJs from "@/components/intro-js";
 
 let router = new VueRouter({
   mode: "history",
@@ -71,6 +72,11 @@ let router = new VueRouter({
       path: "/docs2",
       name: "Docs2",
       component: Docs2
+    },
+    {
+      path: "/introjs",
+      name: "introJs",
+      component: introJs
     }
   ]
 });
