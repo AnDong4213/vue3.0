@@ -8,10 +8,10 @@
 <script>
 import loadJs from "./loadScript";
 
-// const tinymceCDN =
-// "https://cdn.tiny.cloud/1/no-origin/tinymce/5.10.0-121/tinymce.min.js";
+const tinymceCDN =
+  "https://cdn.tiny.cloud/1/no-origin/tinymce/5.10.0-121/tinymce.min.js";
 // const tinymceCDN = "https://cdn.jsdelivr.net/npm/tinymce@5.10.0/tinymce.js";
-const tinymceCDN = "http://localhost:8080/tinymce.js";
+// const tinymceCDN = "http://localhost:8080/tinymce.js";
 
 export default {
   name: "Tinymce2",

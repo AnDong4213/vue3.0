@@ -38,6 +38,9 @@
         <router-link to='/tree'>tree</router-link>
       </div>
       <div>
+        <router-link to='/tree2'>tree2</router-link>
+      </div>
+      <div>
         <router-link to='/docs'>docs</router-link>
       </div>
       <div>

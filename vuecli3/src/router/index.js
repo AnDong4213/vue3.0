@@ -12,9 +12,11 @@ import Mixins from "@/components/mixins";
 import Other from "@/components/other";
 import EventBus from "@/components/event-bus";
 import Tree from "@/components/tree";
+import Tree2 from "@/components/tree/tree2";
 import Docs from "@/components/docs";
 import Docs2 from "@/components/docs2";
 import introJs from "@/components/intro-js";
+import tinymceVue from "@/components/tinymce-vue";
 
 let router = new VueRouter({
   mode: "history",
@@ -64,6 +66,11 @@ let router = new VueRouter({
       component: Tree
     },
     {
+      path: "/tree2",
+      name: "Tree2",
+      component: Tree2
+    },
+    {
       path: "/docs",
       name: "Docs",
       component: Docs
@@ -77,6 +84,11 @@ let router = new VueRouter({
       path: "/introjs",
       name: "introJs",
       component: introJs
+    },
+    {
+      path: "/tinymcevue",
+      name: "tinymceVue",
+      component: tinymceVue
     }
   ]
 });

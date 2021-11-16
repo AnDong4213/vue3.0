@@ -12,6 +12,8 @@
         </ul>
         <h3 class="muted">Intro.js</h3>
       </div>
+      <el-quarter-picker v-model="value"
+                         placeholder="选择季度" />
       <hr>
       <div class="jumbotron">
         <h1 data-step="1"
@@ -57,6 +59,7 @@
 </template>
 
 <script>
+import ElQuarterPicker from "./../../custom-components/el-quarter-picker";
 import introJs from "intro.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "./demo.css";
@@ -68,10 +71,11 @@ export default {
   name: "introJs",
   data() {
     return {
-      introJs: null
+      introJs: null,
+      value: ""
     };
   },
-  components: {},
+  components: { ElQuarterPicker },
   created() {
     console.log(new introJs());
   },
@@ -83,6 +87,9 @@ export default {
     showIntro() {
       this.introJs
         // .onbeforeexit(() => confirm("Are you sure?"))
+        .onchange(targetElement => {
+          console.log(targetElement);
+        })
         .setOptions({
           nextLabel: "下一步 &rarr;",
           prevLabel: "&larr; 上一步",
