@@ -17,7 +17,7 @@ export default {
   components: { Tinymce },
   data() {
     return {
-      content: `<h1 style="text-align: center;">Welcome to China!</h1><p style="text-align: center; font-size: 15px;"><ul>
+      content: `<h1 style="text-align: center;">Welcome to China2!</h1><p style="text-align: center; font-size: 15px;"><ul>
       </ul>`
     };
   },

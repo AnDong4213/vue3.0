@@ -8,10 +8,10 @@
 <script>
 import loadJs from "./loadScript";
 
-const tinymceCDN =
-  "https://cdn.tiny.cloud/1/no-origin/tinymce/5.10.0-121/tinymce.min.js";
+// const tinymceCDN =
+//   "https://cdn.tiny.cloud/1/no-origin/tinymce/5.10.0-121/tinymce.min.js";
 // const tinymceCDN = "https://cdn.jsdelivr.net/npm/tinymce@5.10.0/tinymce.js";
-// const tinymceCDN = "http://localhost:8080/tinymce.js";
+const tinymceCDN = "http://localhost:8080/tinymce/tinymce.js";
 
 export default {
   name: "Tinymce2",
@@ -45,11 +45,14 @@ export default {
         selector: "#tinymceId",
         language: "zh_CN",
         plugins:
-          "lists advlist anchor autolink link autoresize autosave charmap code codesample directionality emoticons fullscreen help hr image",
+          "export pagebreak lists advlist anchor autolink link autoresize autosave charmap advcode codesample directionality emoticons fullscreen help hr image importword media wordcount powerpaste table advtable template",
         toolbar:
-          "code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs importword kityformula-editor help",
+          "importword export code undo redo restoredraft | cut copy powerpaste | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs kityformula-editor template help",
         // menubar: "insert",
+        export_cors_hosts: [],
         image_caption: true,
+        images_upload_credentials: true,
+        tinydrive_token_provider: "URL_TO_YOUR_TOKEN_PROVIDER",
         height: 350, //编辑器高度
         min_height: 400,
         fontsize_formats: "12px 14px 16px 18px 24px 36px 48px 56px 72px",
