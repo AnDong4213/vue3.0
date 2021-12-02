@@ -1,6 +1,6 @@
 <template>
   <div class="parent-tree">
-    <el-button @click="resetChecked">清空</el-button>
+    <el-button @click="resetChecked">清空2</el-button>
     <el-tree ref="tree"
              :data="data"
              show-checkbox
@@ -239,6 +239,7 @@ export default {
       if (!this.flag && this.defaultExpandedKeys.includes(obj.realDataId)) {
         let data = JSON.parse(JSON.stringify(this.data));
         const dfs = root => {
+          console.log(root.realDataId, obj.realDataId);
           if (root.realDataId !== obj.realDataId) {
             root.disabled = true;
           }

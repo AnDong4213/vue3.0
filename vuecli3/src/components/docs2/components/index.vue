@@ -58,6 +58,7 @@ export default {
         fontsize_formats: "12px 14px 16px 18px 24px 36px 48px 56px 72px",
         image_advtab: true,
         image_uploadtab: true,
+        // image_description: false,
         link_list: [
           { title: "预置链接1", value: "http://www.tinymce.com" },
           { title: "预置链接2", value: "http://tinymce.ax-z.cn" }
@@ -153,37 +154,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tinymce-container {
-  position: relative;
-  line-height: normal;
-}
-
-.tinymce-container {
-  ::v-deep {
-    .mce-fullscreen {
-      z-index: 10000;
-    }
-  }
-}
-
-.tinymce-textarea {
-  visibility: hidden;
-  z-index: -1;
-}
-
-.editor-custom-btn-container {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  /*z-index: 2005;*/
-}
-
-.fullscreen .editor-custom-btn-container {
-  z-index: 10000;
-  position: fixed;
-}
-
-.editor-upload-btn {
-  display: inline-block;
-}
 </style>

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import "./tree2.scss";
+// import "./tree2.scss";
 
 export default {
   data() {
