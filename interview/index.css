@@ -1,0 +1,124 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 子元素相对于父元素绝对定位， 
+子元素top，left设置为50%，子元素margin的top，left减去自身高，宽的一半。 */
+#div3 {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  position: relative;
+}
+#div3 p {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+/* 子元素相对于父元素绝对定位， 
+子元素top，let设为50%，transform: translate(-50%, -50%); 
+这种方式会释放子元素在文档中所占的位置 */
+
+#div7 {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+  position: relative;
+}
+#div7 p {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 子元素相对定位，top，let设为50%，transform: translate(-50%, -50%); 
+这种方式并不会释放子元素在文档中所占的位置。 */
+#div6 {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+}
+#div6 p {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 0;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 子元素相对于父元素绝对定位， 
+将子元素的top，right，bottom，left均设为0，然后设置子元素 margin: auto; */
+#div4 {
+  width: 300px;
+  height: 200px;
+  border: 1px solid red;
+
+  position: relative;
+}
+#div4 p {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.squared-paper {
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px; */
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.squared-paper p {
+  background-color: aqua;
+  border: 1px solid red;
+}
+
+/* 九宫格 */
+.box {
+  /* padding: 20px 10px; */
+  display: inline-block;
+  background: #ff000026;
+  overflow: hidden;
+  width: 600px;
+  /* margin-bottom: -10px; */
+  margin-top: 0;
+  background: none;
+}
+.box li {
+  list-style: none;
+  float: left;
+  width: 198px; /*可以用百分比*/
+  height: 198px; /*可以用百分比*/
+
+  border: 1px solid red;
+
+  background: rgba(255, 0, 0, 0.24);
+  text-align: center;
+  line-height: 198px;
+}
