@@ -24,7 +24,9 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  created() {
+    console.log(this.ch2Unicdoe("图片清单"));
+  },
   mounted() {
     this.init();
   },
@@ -65,12 +67,29 @@ export default {
         ],
         image_list: [
           {
-            title: "预置图片1",
+            title:
+              "预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1",
             value: "https://www.tiny.cloud/images/glyph-tinymce@2x.png"
           },
           {
             title: "预置图片2",
             value: "https://www.baidu.com/img/bd_logo1.png"
+          },
+          {
+            title:
+              "预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1",
+            value:
+              "https://static.firefoxchina.cn/202112/bvE6ZAms9qmTVBELq9DzakTEL5f0Y6ORF9InygWw.jpeg"
+          },
+          {
+            title:
+              "预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1",
+            value: "http://localhost:8080/360.jpg"
+          },
+          {
+            title:
+              "预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1预置图片1",
+            value: "http://localhost:8080/22.jpeg"
           }
         ],
         image_class_list: [
@@ -145,6 +164,24 @@ export default {
         // statusbar: false
         //icons:'ax-color',
       });
+    },
+    isChinese(s) {
+      return /[\u4e00-\u9fa5]/.test(s);
+    },
+    ch2Unicdoe(str) {
+      if (!str) {
+        return;
+      }
+      var unicode = "";
+      for (var i = 0; i < str.length; i++) {
+        var temp = str.charAt(i);
+        if (this.isChinese(temp)) {
+          unicode += "\\u" + temp.charCodeAt(0).toString(16);
+        } else {
+          unicode += temp;
+        }
+      }
+      return unicode;
     }
   },
   watch: {
