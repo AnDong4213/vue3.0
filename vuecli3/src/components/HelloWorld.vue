@@ -3,8 +3,14 @@
     <h1 @click="eventHandle">{{ msg }}</h1>
     <p>Original message: "{{ message }}"</p>
     <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    <div>
+      <button @click="handleClick2"
+              ref="btnRef2">小米{{astncData2}}</button>
+    </div>
     <input v-model="message" />
-    <el-button type="primary">乐乐</el-button>
+    <el-button type="primary"
+               @click="handleClick"
+               ref="btnRef">乐乐{{astncData}}</el-button>
     <el-switch v-model="q"></el-switch>
 
     <el-switch v-model="value"
@@ -74,7 +80,9 @@ export default {
     return {
       message: "Hello",
       q: true,
-      value: true
+      value: true,
+      astncData: 6,
+      astncData2: 3
     };
   },
   computed: {
@@ -162,6 +170,27 @@ export default {
       } catch (err) {
         console.error("Failed to copy: ", err);
       }
+    },
+    handleClick() {
+      this.astncData = 7;
+      console.log(this.$refs.btnRef.$el.textContent);
+    },
+    handleClick2() {
+      this.astncData2 = 7;
+      console.log(this.$refs.btnRef2);
+      // 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+      /* this.$nextTick(() => {
+        console.log(this.$refs.btnRef2.textContent);
+      }); */
+      console.log(this.$refs.btnRef2.innerText);
+      /* setTimeout(() => {
+        console.log(this.$refs.btnRef2.innerText);
+      }); */
+
+      // 作为一个 Promise 使用
+      /* Vue.nextTick().then(function() {
+        // DOM 更新了
+      }); */
     }
   },
   watch: {
