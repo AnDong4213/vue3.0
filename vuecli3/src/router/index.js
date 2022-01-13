@@ -17,6 +17,7 @@ import Docs from "@/components/docs";
 import Docs2 from "@/components/docs2";
 import introJs from "@/components/intro-js";
 import tinymceVue from "@/components/tinymce-vue";
+import uploadSlice from "@/components/upload-slice";
 
 let router = new VueRouter({
   mode: "history",
@@ -89,6 +90,11 @@ let router = new VueRouter({
       path: "/tinymcevue",
       name: "tinymceVue",
       component: tinymceVue
+    },
+    {
+      path: "/uploadSlice",
+      name: "uploadSlice",
+      component: uploadSlice
     }
   ]
 });

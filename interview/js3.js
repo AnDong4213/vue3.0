@@ -68,3 +68,30 @@ setTimeout(function () {
   console.log(aaa.valueOf());
   console.log(aaa + ""); // 也可以利用隐式类型转换：
 }
+
+{
+  let arr = [];
+
+  setTimeout(() => arr.push(6), 0);
+  arr.push(1);
+  const p = new Promise((resolve) => {
+    arr.push(2);
+    resolve();
+  });
+  arr.push(3);
+  p.then(() => arr.push(5));
+  arr.push(4);
+  setTimeout(() => arr.push(7), 0);
+
+  setTimeout(() => {
+    // 应该输出 [1,2,3,4,5,6,7]
+    // 在 iOS 小程序环境，这里会输出 [1,2,3,4,6,5,7]
+    console.log(arr);
+  }, 0);
+}
+
+{
+  new Promise(() => {
+    console.log(9900);
+  });
+}

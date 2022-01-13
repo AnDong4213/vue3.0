@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* @font-face {
+        font-family: "icomoon";
+        src: url("fonts/icomoon.eot?wr5es");
+        src: url("fonts/icomoon.eot?wr5es#iefix") format("embedded-opentype"),
+          url("fonts/icomoon.ttf?wr5es") format("truetype"),
+          url("fonts/icomoon.woff?wr5es") format("woff"),
+          url("fonts/icomoon.svg?wr5es#icomoon") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      } */
+      /* 上面是我引入我的字体图标库 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+      }
+
+      .tx {
+        font-family: "icomoon";
+        position: absolute;
+        color: #000;
+        font-size: 15px;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var baba = document.querySelector("body");
+      baba.addEventListener("click", function (e) {
+        tianJia(e);
+      });
+
+      var erZi = [];
+      function tianJia(e) {
+        var sunZi = document.createElement("div");
+        sunZi.className = "tx";
+        sunZi.innerHTML = "<span></span>";
+        baba.appendChild(sunZi);
+
+        erZi.push({
+          el: sunZi,
+          top: e.clientY - 20,
+          left: e.clientX - 20,
+          opacity: 1,
+          scale: 1,
+          color: `rgb(${255 * Math.random()},${255 * Math.random()},${
+            255 * Math.random()
+          })`
+        });
+        console.log(erZi);
+        move();
+      }
+      function move() {
+        for (var i = 0; i < erZi.length; i++) {
+          if (erZi[i].opacity <= 0) {
+            baba.removeChild(erZi[i].el);
+            erZi.splice(i, 1);
+            return;
+          }
+          erZi[i].top--;
+          erZi[i].opacity = erZi[i].opacity - 0.01;
+          erZi[i].scale = erZi[i].scale + 0.02;
+          erZi[i].el.style.cssText = `
+                  top: ${erZi[i].top}px;
+                  left: ${erZi[i].left}px;
+                  color: ${erZi[i].color};
+                  opacity: ${erZi[i].opacity};
+                  transform: scale(${erZi[i].scale});`;
+        }
+        window.requestAnimationFrame(move);
+      }
+    </script>
+  </body>
+</html>
