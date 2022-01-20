@@ -1,12 +1,12 @@
 <template>
   <div>
-
+    recommend
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'recommend',
   components: {}
 }
 </script>

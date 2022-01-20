@@ -1,12 +1,12 @@
 <template>
   <div>
-
+    user-center
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'user-center',
   components: {}
 }
 </script>
