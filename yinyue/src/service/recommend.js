@@ -9,8 +9,3 @@ export function getAlbum(album) {
     id: album.id
   })
 }
-const m = 1
-// export const m = 1
-// export { m }
-export default m
-console.log(m)
