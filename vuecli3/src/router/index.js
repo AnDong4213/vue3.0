@@ -18,6 +18,7 @@ import Docs2 from "@/components/docs2";
 import introJs from "@/components/intro-js";
 import tinymceVue from "@/components/tinymce-vue";
 import uploadSlice from "@/components/upload-slice";
+import vuePdf from "@/components/vuepdf";
 
 let router = new VueRouter({
   mode: "history",
@@ -95,6 +96,11 @@ let router = new VueRouter({
       path: "/uploadSlice",
       name: "uploadSlice",
       component: uploadSlice
+    },
+    {
+      path: "/vuepdf",
+      name: "vuePdf",
+      component: vuePdf
     }
   ]
 });

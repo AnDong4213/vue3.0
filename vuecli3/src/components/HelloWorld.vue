@@ -55,6 +55,9 @@
       <div>
         <router-link to='/introjs'>introJs</router-link>
       </div>
+      <div>
+        <router-link to='/vuepdf'>vuepdf</router-link>
+      </div>
     </div>
   </div>
 </template>
