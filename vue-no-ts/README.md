@@ -1,8 +1,14 @@
-# yinyue
+## Vue Loader
 
-## Project setup
-```
-yarn install
+```java
+    // 当 Vue Loader 编译单文件组件中的 <template> 块时，它也会将所有遇到的资源 URL 转换为 webpack 模块请求。
+    <img src="../image.png">
+
+    createElement('img', {
+    attrs: {
+        src: require('../image.png') // 现在这是一个模块的请求了
+    }
+    })
 ```
 
 ### Compiles and hot-reloads for development
