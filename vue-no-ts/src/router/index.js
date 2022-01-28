@@ -13,6 +13,9 @@ const Search = () => import('@/views/search' /* webpackChunkName: "search" */)
 const UserCenter = () =>
   import('@/views/user-center' /* webpackChunkName: "user-center" */)
 
+const Vue3 = () =>
+  import('@/views/vue3' /* webpackChunkName: "vue3" */)
+
 const routes = [
   {
     path: '/',
@@ -37,6 +40,10 @@ const routes = [
   {
     path: '/user',
     component: UserCenter
+  },
+  {
+    path: '/vue3',
+    component: Vue3
   }
 ]
 

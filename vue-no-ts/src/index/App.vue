@@ -11,6 +11,9 @@
     <div>
       <router-link to="/search">search</router-link>
     </div>
+    <div>
+      <router-link to="/vue3">Vue3</router-link>
+    </div>
   </section>
   <router-view />
 </template>
