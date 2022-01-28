@@ -1,5 +1,6 @@
 <template>
   <div>singer--{{ arr.length }}</div>
+  <div v-html="ele"></div>
 </template>
 
 <script>
@@ -9,7 +10,8 @@ export default {
   name: 'singer',
   data() {
     return {
-      arr: []
+      arr: [],
+      ele: '<p style="color: red;">内嵌HTML标签</p>'
     }
   },
   created() {
