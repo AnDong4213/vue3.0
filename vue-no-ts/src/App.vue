@@ -11,6 +11,8 @@
 export default {
   created() {
     console.log(process.env.NODE_ENV)
+    console.log(process.env.VUE_APP_AN)
+    console.log(process.env.VUE_APP_LOCAL_AN)
     console.log(process.env.VUE_APP_SECRET_KEY)
   },
   components: {
