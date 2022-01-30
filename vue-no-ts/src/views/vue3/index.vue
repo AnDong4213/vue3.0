@@ -1,13 +1,21 @@
 <template>
-  <h2 class="user" @click="changeUser">change user</h2>
-  <h2 class="user" @click="updateLocation">change Location</h2>
-  <child :user="user" />
+  <div class="flex-div">
+    <div>
+      <h2 class="user" @click="changeUser">change user</h2>
+      <h2 class="user" @click="updateLocation">change Location</h2>
+      <child :user="user" />
+    </div>
+    <div>
+      <child2 />
+    </div>
+  </div>
 </template>
 
 <script>
 // 在 setup() 中使用 provide 时，我们首先从 vue 显式导入 provide 方法。
-import { ref, reactive, provide, readonly } from 'vue'
+import { ref, reactive, provide } from 'vue'
 import Child from './child.vue'
+import Child2 from './child2.vue'
 
 export default {
   name: 'vue3',
@@ -54,12 +62,16 @@ export default {
     }
   }, */
   components: {
-    Child
+    Child,
+    Child2
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.flex-div {
+  display: flex;
+}
 .user {
   margin-bottom: 10px;
   cursor: pointer;

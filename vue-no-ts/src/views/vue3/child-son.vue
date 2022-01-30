@@ -37,7 +37,6 @@ export default {
     const divs = ref([])
 
     onMounted(() => {
-      console.log('ChildSon')
       console.log(childson.value)
       console.log(divs.value)
     })

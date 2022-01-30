@@ -40,7 +40,8 @@ export default defineComponent({
       default: "input"
     }
   },
-  inheritAttrs: false,
+  // 如果你不希望组件的根元素继承 attribute，可以在组件的选项中设置 inheritAttrs: false。禁用 attribute 继承的常见场景是需要将 attribute 应用于根节点之外的其他元素。
+  inheritAttrs: false, 
   setup(props, context) {
     const inputRef = reactive({
       val: props.modelValue || "",
