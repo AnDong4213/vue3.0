@@ -85,6 +85,15 @@ module.exports = {
   devServer: {
     before(app) {
       registerRouter(app)
-    }
+    },
+    /* proxy: {
+      '/api': {
+        target: 'https://tc39.es/',
+        ws: true,
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: { '^/api': '' },
+      },
+    } */
   }
 }
