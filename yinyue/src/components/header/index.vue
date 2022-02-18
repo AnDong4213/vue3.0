@@ -1,9 +1,8 @@
 <template>
   <div class="header">
-    <span class="icon"></span>
+    <!-- <span class="icon"></span> -->
     <h1 class="text">Chicken Music</h1>
-    <router-link class="mine"
-                 to="/user">
+    <router-link class="mine" to="/user">
       <i class="icon-mine"></i>
     </router-link>
   </div>
@@ -19,7 +18,8 @@ export default {
 .header {
   height: 44px;
   text-align: center;
-  color: $color-theme;
+  // color: $color-theme;
+  color: #666;
   font-size: 0;
   .icon {
     display: inline-block;
