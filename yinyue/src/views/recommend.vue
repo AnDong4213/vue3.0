@@ -1,23 +1,26 @@
 <template>
-  <div class="recommend">
+  <div class="recommend"
+       v-loading:[loadingText]="loading">
     <scroll class="recommend-content">
       <div>
         <div class="slider-wrapper">
           <div class="slider-content">
-            <slider v-if="sliders.length" :sliders="sliders"></slider>
+            <slider v-if="sliders.length"
+                    :sliders="sliders"></slider>
           </div>
         </div>
         <div class="recommend-list">
-          <h1 class="list-title" v-show="!loading">热门歌单推荐</h1>
+          <h1 class="list-title"
+              v-show="!loading">热门歌单推荐</h1>
           <ul>
-            <li
-              v-for="item in albums"
-              class="item"
-              :key="item.id"
-              @click="selectItem(item)"
-            >
+            <li v-for="item in albums"
+                class="item"
+                :key="item.id"
+                @click="selectItem(item)">
               <div class="icon">
-                <img width="60" height="60" v-lazy="item.pic" />
+                <img width="60"
+                     height="60"
+                     v-lazy="item.pic" />
               </div>
               <div class="text">
                 <h2 class="name">
@@ -46,7 +49,8 @@ export default {
     return {
       sliders: [],
       albums: [],
-      selectedAlbum: null
+      selectedAlbum: null,
+      loadingText: '哈哈加载中...'
     }
   },
   async created() {
@@ -56,7 +60,7 @@ export default {
     this.albums = result.albums
   },
   methods: {
-    selectItem() {}
+    selectItem() { }
   },
   computed: {
     loading() {

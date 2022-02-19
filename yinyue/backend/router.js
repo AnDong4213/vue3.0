@@ -122,7 +122,7 @@ function registerRecommend(app) {
         }
 
         // 往前端发送一个标准格式的响应数据，包括成功错误码和数据
-        // setTimeout(() => {
+        setTimeout(() => {
         res.json({
           code: ERR_OK,
           result: {
@@ -130,7 +130,7 @@ function registerRecommend(app) {
             albums
           }
         })
-        // }, 1000)
+        }, 2000)
       } else {
         res.json(data)
       }
