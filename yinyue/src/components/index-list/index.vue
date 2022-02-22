@@ -62,7 +62,8 @@ export default {
       default: 10
     }
   },
-  setup(props) {
+  emits: ['select'],
+  setup(props, { emit }) {
     const { groupRef, onScroll, fixedTitle, fixedStyle, currentIndex } = useFixed(props)
     const { shortcutList, scrollRef, onShortcutTouchStart, onShortcutTouchMove } = useShortcut(props, groupRef)
 
@@ -71,7 +72,7 @@ export default {
     })
 
     function onItemClick(item) {
-      console.log(item)
+      emit('select', item)
     }
 
     return {
