@@ -20,6 +20,7 @@
               <div class="icon">
                 <img width="60"
                      height="60"
+                     class="g-img-gray"
                      v-lazy="item.pic" />
               </div>
               <div class="text">

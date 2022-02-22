@@ -14,6 +14,15 @@ html {
   position: relative;
 }
 
+.g-img-gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.3s;

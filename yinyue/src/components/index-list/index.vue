@@ -1,6 +1,7 @@
 <template>
   <scroll class="index-list"
           :probe-type="3"
+          ref="scrollRef"
           @scroll="onScroll">
     <ul ref="groupRef">
       <li v-for="group in data"
@@ -12,23 +13,40 @@
               :key="item.id"
               class="item"
               @click="onItemClick(item)">
-            <img class="avatar"
+            <img class="avatar g-img-gray"
                  v-lazy="item.pic">
             <span class="name">{{item.name}}</span>
           </li>
         </ul>
       </li>
     </ul>
-    <div class="fixed">
-      <div class="fixed-title">uu</div>
+    <div class="fixed"
+         v-show="fixedTitle"
+         :style="fixedStyle">
+      <div class="fixed-title">{{fixedTitle}}</div>
+    </div>
+    <div class="shortcut"
+         @touchstart.stop.prevent="onShortcutTouchStart"
+         @touchmove.stop.prevent="onShortcutTouchMove"
+         @touchend.stop.prevent>
+      <ul>
+        <li v-for="(item, index) in shortcutList"
+            :key="item"
+            :data-index="index"
+            class="item"
+            :class="{'current':currentIndex===index}">
+          {{item}}
+        </li>
+      </ul>
     </div>
   </scroll>
 </template>
 
 <script>
-// import { onMounted } from 'vue'
+import { onMounted } from 'vue'
 import Scroll from '@/components/base/scroll'
 import useFixed from './use-fixed'
+import useShortcut from './use-shortcut'
 
 export default {
   name: 'index-list',
@@ -38,16 +56,37 @@ export default {
       default() {
         return []
       }
+    },
+    age: {
+      type: Number,
+      default: 10
     }
   },
-  methods: {
-    onItemClick() { }
-  },
   setup(props) {
-    const { groupRef, onScroll } = useFixed(props)
+    const { groupRef, onScroll, fixedTitle, fixedStyle, currentIndex } = useFixed(props)
+    const { shortcutList, scrollRef, onShortcutTouchStart, onShortcutTouchMove } = useShortcut(props, groupRef)
+
+    onMounted(() => {
+      console.log(scrollRef.value.scroll)
+    })
+
+    function onItemClick(item) {
+      console.log(item)
+    }
 
     return {
-      groupRef, onScroll
+      groupRef,
+      onScroll,
+      fixedTitle,
+      fixedStyle,
+      currentIndex,
+      // shortcut
+      shortcutList,
+      scrollRef,
+      onShortcutTouchStart,
+      onShortcutTouchMove,
+      // 详情
+      onItemClick
     }
   },
   components: {

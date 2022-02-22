@@ -56,3 +56,6 @@ module.exports = {
   CommonJS 模块的require()是同步加载模块，ES6 模块的import命令是异步加载，有一个独立的模块依赖的解析阶段。
 
 */
+
+// ['1', '2', '3'].map(parseInt)
+// CSS伪类与伪元素   https://blog.csdn.net/m0_37686205/article/details/88396191

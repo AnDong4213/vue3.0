@@ -6,7 +6,8 @@
            v-for="item in sliders"
            :key="item.id">
         <a :href="item.link">
-          <img :src="item.pic" />
+          <img :src="item.pic"
+               class="g-img-gray" />
         </a>
       </div>
     </div>
