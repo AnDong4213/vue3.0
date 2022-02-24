@@ -21,7 +21,6 @@ export default {
   },
   async created() {
     const res = await getSingerList()
-    console.log(res)
     this.singers = res.singers
   },
   methods: {
