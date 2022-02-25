@@ -2,7 +2,8 @@
   <div class="singer-detail">
     <music-list :songs="songs"
                 :pic="pic"
-                :title="title" />
+                :title="title"
+                :loading="loading" />
   </div>
 </template>
 
@@ -18,14 +19,15 @@ export default {
   },
   data() {
     return {
-      songs: []
+      songs: [],
+      loading: true
     }
   },
   async created() {
     const result = await getSingerDetail(this.singer)
     const songs = await processSongs(result?.songs || [])
     this.songs = songs
-    console.log(songs)
+    this.loading = false
   },
   computed: {
     pic() {

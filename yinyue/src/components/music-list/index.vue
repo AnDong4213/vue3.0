@@ -23,6 +23,7 @@
     <scroll class="list"
             :style="scrollStyle"
             :probe-type="3"
+            v-loading="loading"
             @scroll="onScroll">
       <div class="song-list-wrapper">
         <song-list :songs="songs"
@@ -121,6 +122,7 @@ export default {
         blur = Math.min(this.maxTranslateY / imageHeight, scrollY / imageHeight) * 20
       }
       return {
+        // backdrop-filter 可以为一个元素后面区域添加图形效果（如模糊或颜色偏移）。适用于元素背后的所有元素，为了看到效果，必须使元素或其背景至少部分透明。添加滤镜
         backdropFilter: `blur(${blur}px)`
       }
     }
@@ -134,7 +136,6 @@ export default {
       this.$router.back()
     },
     onScroll(pos) {
-      console.log(pos)
       this.scrollY = -pos.y
     },
     selectItem({ song, index }) {
@@ -178,7 +179,8 @@ export default {
     text-align: center;
     line-height: 40px;
     font-size: $font-size-large;
-    color: $color-text;
+    // color: $color-text;
+    color: #999;
   }
   .bg-image {
     position: relative;
@@ -227,6 +229,7 @@ export default {
     bottom: 0;
     width: 100%;
     z-index: 0;
+    // overflow: hidden;
     .song-list-wrapper {
       padding: 20px 30px;
       background: $color-background;
