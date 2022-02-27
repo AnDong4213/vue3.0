@@ -24,6 +24,7 @@
             :style="scrollStyle"
             :probe-type="3"
             v-loading="loading"
+            v-no-result:[noResultText]="noResult"
             @scroll="onScroll">
       <div class="song-list-wrapper">
         <song-list :songs="songs"
@@ -36,7 +37,7 @@
 <script>
 import Scroll from '@/components/base/scroll'
 import SongList from '@/components/base/song-list'
-// import { mapActions, mapState } from 'vuex'
+import { mapActions } from 'vuex'
 
 const RESERVED_HEIGHT = 40
 
@@ -58,7 +59,7 @@ export default {
     loading: Boolean,
     noResultText: {
       type: String,
-      default: '抱歉，没有找到可播放的歌曲'
+      default: '抱歉，没有找到可播放的歌曲...'
     },
     rank: Boolean
   },
@@ -71,6 +72,9 @@ export default {
     }
   },
   computed: {
+    noResult() {
+      return !this.loading && !this.songs.length
+    },
     playBtnStyle() {
       let display = ''
       if (this.scrollY >= this.maxTranslateY) {
@@ -85,6 +89,7 @@ export default {
       let zIndex = 0
       let paddingTop = '70%'
       let height = 0
+      // IPHONE兼容
       let translateZ = 0
 
       if (scrollY > this.maxTranslateY) {
@@ -116,6 +121,7 @@ export default {
     },
     filterStyle() {
       let blur = 0
+      // 响应式变量大于1次的时候，用临时变量缓存一下。否则，，(依赖收集过程发生多次)一系列js执行，过程会发生多次
       const scrollY = this.scrollY
       const imageHeight = this.imageHeight
       if (scrollY >= 0) {
@@ -139,14 +145,16 @@ export default {
       this.scrollY = -pos.y
     },
     selectItem({ song, index }) {
-      /* this.selectPlay({
+      console.log(song, index)
+      this.selectPlay({
         list: this.songs,
         index
-      }) */
+      })
     },
     random() {
-      //   this.randomPlay(this.songs)
-    }
+      this.randomPlay(this.songs)
+    },
+    ...mapActions(['selectPlay', 'randomPlay'])
   }
 }
 </script>
