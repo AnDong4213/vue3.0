@@ -6,7 +6,8 @@
         <img :src="currentSong.pic">
       </div>
       <div class="top">
-        <div class="back">
+        <div class="back"
+             @click="goBack">
           <i class="icon-back"></i>
         </div>
         <h1 class="title">{{currentSong.name}}</h1>
@@ -25,14 +26,30 @@ import './player.scss'
 export default {
   setup() {
     const audioRef = ref(null)
+
     // vuex
     const store = useStore()
     const fullScreen = computed(() => store.state.fullScreen)
     const currentSong = computed(() => store.getters.currentSong)
 
+    watch(currentSong, (newSong) => {
+      if (!newSong.id || !newSong.url) {
+        return
+      }
+      const audioEl = audioRef.value
+      audioEl.src = newSong.url
+      audioEl.play()
+    })
+
+    function goBack() {
+      store.commit('setFullScreen', false)
+    }
+
     return {
+      audioRef,
       fullScreen,
-      currentSong
+      currentSong,
+      goBack
     }
   }
 }
