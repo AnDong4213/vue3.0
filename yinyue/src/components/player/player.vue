@@ -19,11 +19,12 @@
           <span class="dot"></span>
         </div>
         <div class="progress-wrapper">
-          <span class="time time-l"></span>
+          <span class="time time-l">{{formatTime(currentTime)}}</span>
           <div class="progress-bar-wrapper">
-            <progress-bar ref="barRef"></progress-bar>
+            <progress-bar ref="barRef"
+                          :progress="progress"></progress-bar>
           </div>
-          <span class="time time-r"></span>
+          <span class="time time-r">{{formatTime(currentSong.duration)}}</span>
         </div>
         <div class="operators">
           <div class="icon i-left">
@@ -56,7 +57,8 @@
     <audio ref="audioRef"
            @pause="pause"
            @canplay="ready"
-           @error="error"></audio>
+           @error="error"
+           @timeupdate="updateTime"></audio>
   </div>
 </template>
 
@@ -65,6 +67,8 @@ import { computed, watch, ref } from 'vue'
 import { useStore } from 'vuex'
 import useMode from './use-mode'
 import useFavorite from './use-favorite'
+import ProgressBar from './progress-bar'
+import { formatTime } from '@/assets/js/util'
 import './player.scss'
 
 export default {
@@ -72,7 +76,7 @@ export default {
     // data
     const audioRef = ref(null)
     const songReady = ref(false)
-    // const currentTime = ref(0)
+    const currentTime = ref(0)
 
     // vuex
     const store = useStore()
@@ -93,12 +97,14 @@ export default {
     const disableCls = computed(() => {
       return songReady.value ? '' : 'disable'
     })
+    const progress = computed(() => currentTime.value / currentSong.value.duration)
 
     // watch
     watch(currentSong, (newSong) => {
       if (!newSong.id || !newSong.url) {
         return
       }
+      currentTime.value = 0
       songReady.value = false
       const audioEl = audioRef.value
       audioEl.src = newSong.url
@@ -183,10 +189,17 @@ export default {
       songReady.value = true
     }
 
+    function updateTime(e) {
+      // console.log(e.target.currentTime)
+      currentTime.value = e.target.currentTime
+    }
+
     return {
       audioRef,
       fullScreen,
       currentSong,
+      progress,
+      currentTime,
       playIcon,
       disableCls,
       goBack,
@@ -196,6 +209,8 @@ export default {
       pause,
       ready,
       error,
+      updateTime,
+      formatTime,
       // mode
       modeIcon,
       changeMode,
@@ -203,6 +218,9 @@ export default {
       getFavoriteIcon,
       toggleFavorite
     }
+  },
+  components: {
+    ProgressBar
   }
 }
 </script>
