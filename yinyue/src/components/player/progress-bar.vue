@@ -1,12 +1,15 @@
 <template>
   <div class="progress-bar"
        @click="onClick">
+    <div ref="progress3"
+         style="transform: translateX(20px)">kk</div>
     <div class="bar-inner">
       <div class="progress"
            :style="progressStyle"
            ref="progress"></div>
       <div class="progress-btn-wrapper"
            :style="btnStyle"
+           ref="progress2"
            @touchstart.prevent="onTouchStart"
            @touchmove.prevent="onTouchMove"
            @touchend.prevent="onTouchEnd">
@@ -20,6 +23,7 @@ const progressBtnWidth = 16
 
 export default {
   name: 'progress-bar',
+  emits: ['progress-changing', 'progress-changed'],
   props: {
     progress: {
       type: Number,
@@ -45,16 +49,41 @@ export default {
   },
   watch: {
     progress(newProgress) {
-      //   console.log(this.$el)
+      //   console.log(this.$el) // 获取dom
+      /* const aa = getComputedStyle(this.$refs.progress2).transform
+      const bb = getComputedStyle(this.$refs.progress3).transform
+      // console.log(bb.concat(' ', aa))
+      this.$refs.progress3.style.transform = bb.concat(' ', aa) */
       this.setOffset(newProgress)
     }
   },
+  created() {
+    this.touch = {}
+  },
   methods: {
-    onTouchStart(e) { },
-    onTouchMove(e) { },
-    onTouchEnd(e) { },
-    onClick() {
-
+    onTouchStart(e) {
+      this.touch.x1 = e.touches[0].pageX
+      this.touch.beginWidth = this.$refs.progress.clientWidth
+    },
+    onTouchMove(e) {
+      const delta = e.touches[0].pageX - this.touch.x1
+      const tempWidth = this.touch.beginWidth + delta
+      const barWidth = this.$el.clientWidth - progressBtnWidth
+      const progress = Math.min(1, Math.max(tempWidth / barWidth, 0))
+      this.offset = barWidth * progress
+      this.$emit('progress-changing', progress)
+    },
+    onTouchEnd() {
+      const barWidth = this.$el.clientWidth - progressBtnWidth
+      const progress = this.$refs.progress.clientWidth / barWidth
+      this.$emit('progress-changed', progress)
+    },
+    onClick(e) {
+      const rect = this.$el.getBoundingClientRect()
+      const offsetWidth = e.pageX - rect.left
+      const barWidth = this.$el.clientWidth - progressBtnWidth
+      const progress = offsetWidth / barWidth
+      this.$emit('progress-changed', progress)
     },
     setOffset(progress) {
       const barWidth = this.$el.clientWidth - progressBtnWidth
