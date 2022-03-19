@@ -30,7 +30,7 @@
             <div class="playing-lyric">{{playingLyric}}</div>
           </div> -->
         </div>
-        <!-- <scroll class="middle-r"
+        <scroll class="middle-r"
                 ref="lyricScrollRef"
                 :style="middleRStyle">
           <div class="lyric-wrapper">
@@ -43,12 +43,12 @@
                 {{line.txt}}
               </p>
             </div>
-            <div class="pure-music"
+            <!-- <div class="pure-music"
                  v-show="pureMusicLyric">
               <p>{{pureMusicLyric}}</p>
-            </div>
+            </div> -->
           </div>
-        </scroll> -->
+        </scroll>
       </div>
       <div class="bottom">
         <div class="dot-wrapper">
@@ -105,10 +105,12 @@
 <script>
 import { computed, watch, ref } from 'vue'
 import { useStore } from 'vuex'
+import Scroll from '@/components/base/scroll'
+import ProgressBar from './progress-bar'
 import useMode from './use-mode'
 import useFavorite from './use-favorite'
 import useCd from './use-cd'
-import ProgressBar from './progress-bar'
+import useLyric from './use-lyric'
 import { formatTime } from '@/assets/js/util'
 import { PLAY_MODE } from '@/assets/js/constant'
 import './player.scss'
@@ -134,6 +136,7 @@ export default {
     const { modeIcon, changeMode } = useMode()
     const { getFavoriteIcon, toggleFavorite } = useFavorite()
     const { cdCls, cdRef, cdImageRef } = useCd()
+    const { currentLyric, currentLineNum, playLyric, lyricScrollRef, lyricListRef, stopLyric } = useLyric({ songReady, currentTime })
 
     // computed
     const playlist = computed(() => store.state.playlist)
@@ -155,6 +158,8 @@ export default {
       const audioEl = audioRef.value
       audioEl.src = newSong.url
       audioEl.play()
+      // cdRef.value.style.transform = 'rotate(0)'
+      // cdImageRef.value.style.transform = 'rotate(0)'
     })
     watch(playing, (newPlaying) => {
       if (!songReady.value) {
@@ -163,8 +168,10 @@ export default {
       const audioEl = audioRef.value
       if (newPlaying) {
         audioEl.play()
+        playLyric()
       } else {
         audioEl.pause()
+        stopLyric()
       }
     })
 
@@ -235,6 +242,7 @@ export default {
         return
       }
       songReady.value = true
+      playLyric()
     }
 
     function error() {
@@ -250,11 +258,17 @@ export default {
     function onProgressChanging(progress) {
       progressChanging = true
       currentTime.value = currentSong.value.duration * progress
+      playLyric()
+      stopLyric()
     }
 
     function onProgressChanged(progress) {
       progressChanging = false
       audioRef.value.currentTime = currentTime.value = currentSong.value.duration * progress
+      if (!playing.value) {
+        store.commit('setPlayingState', true)
+      }
+      playLyric()
     }
 
     function end() {
@@ -296,11 +310,17 @@ export default {
       // cd
       cdCls,
       cdRef,
-      cdImageRef
+      cdImageRef,
+      // lyric
+      currentLyric,
+      currentLineNum,
+      lyricScrollRef,
+      lyricListRef
     }
   },
   components: {
-    ProgressBar
+    ProgressBar,
+    Scroll
   }
 }
 </script>

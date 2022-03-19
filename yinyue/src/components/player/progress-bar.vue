@@ -1,8 +1,8 @@
 <template>
   <div class="progress-bar"
        @click="onClick">
-    <div ref="progress3"
-         style="transform: translateX(20px)">kk</div>
+    <!-- <div ref="progress3"
+         style="transform: translateX(20px)">kk</div> -->
     <div class="bar-inner">
       <div class="progress"
            :style="progressStyle"
@@ -52,7 +52,6 @@ export default {
       //   console.log(this.$el) // 获取dom
       /* const aa = getComputedStyle(this.$refs.progress2).transform
       const bb = getComputedStyle(this.$refs.progress3).transform
-      // console.log(bb.concat(' ', aa))
       this.$refs.progress3.style.transform = bb.concat(' ', aa) */
       this.setOffset(newProgress)
     }
