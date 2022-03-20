@@ -13,7 +13,10 @@
         <h1 class="title">{{currentSong.name}}</h1>
         <h2 class="subtitle">{{currentSong.singer}}</h2>
       </div>
-      <div class="middle">
+      <div class="middle"
+           @touchstart.prevent="onMiddleTouchStart"
+           @touchmove.prevent="onMiddleTouchMove"
+           @touchend.prevent="onMiddleTouchEnd">
         <div class="middle-l"
              :style="middleLStyle">
           <div ref="cdWrapperRef"
@@ -26,9 +29,9 @@
                    :src="currentSong.pic">
             </div>
           </div>
-          <!-- <div class="playing-lyric-wrapper">
+          <div class="playing-lyric-wrapper">
             <div class="playing-lyric">{{playingLyric}}</div>
-          </div> -->
+          </div>
         </div>
         <scroll class="middle-r"
                 ref="lyricScrollRef"
@@ -43,17 +46,19 @@
                 {{line.txt}}
               </p>
             </div>
-            <!-- <div class="pure-music"
+            <div class="pure-music"
                  v-show="pureMusicLyric">
               <p>{{pureMusicLyric}}</p>
-            </div> -->
+            </div>
           </div>
         </scroll>
       </div>
       <div class="bottom">
         <div class="dot-wrapper">
-          <span class="dot"></span>
-          <span class="dot"></span>
+          <span class="dot"
+                :class="{'active': currentShow==='cd'}"></span>
+          <span class="dot"
+                :class="{'active': currentShow==='lyric'}"></span>
         </div>
         <div class="progress-wrapper">
           <span class="time time-l">{{formatTime(currentTime)}}</span>
@@ -111,6 +116,7 @@ import useMode from './use-mode'
 import useFavorite from './use-favorite'
 import useCd from './use-cd'
 import useLyric from './use-lyric'
+import useMiddleInteractive from './use-middle-interactive'
 import { formatTime } from '@/assets/js/util'
 import { PLAY_MODE } from '@/assets/js/constant'
 import './player.scss'
@@ -136,7 +142,11 @@ export default {
     const { modeIcon, changeMode } = useMode()
     const { getFavoriteIcon, toggleFavorite } = useFavorite()
     const { cdCls, cdRef, cdImageRef } = useCd()
-    const { currentLyric, currentLineNum, playLyric, lyricScrollRef, lyricListRef, stopLyric } = useLyric({ songReady, currentTime })
+    const {
+      currentLyric, currentLineNum, playLyric, lyricScrollRef, lyricListRef, stopLyric, pureMusicLyric,
+      playingLyric
+    } = useLyric({ songReady, currentTime })
+    const { currentShow, middleLStyle, middleRStyle, onMiddleTouchStart, onMiddleTouchMove, onMiddleTouchEnd } = useMiddleInteractive()
 
     // computed
     const playlist = computed(() => store.state.playlist)
@@ -315,7 +325,16 @@ export default {
       currentLyric,
       currentLineNum,
       lyricScrollRef,
-      lyricListRef
+      lyricListRef,
+      pureMusicLyric,
+      playingLyric,
+      // middle-interactive
+      currentShow,
+      middleLStyle,
+      middleRStyle,
+      onMiddleTouchStart,
+      onMiddleTouchMove,
+      onMiddleTouchEnd
     }
   },
   components: {

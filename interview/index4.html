@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        top: 20px;
+        width: 200px;
+        position: fixed;
+        left: 20px;
+      }
+      .p1 {
+        background-color: red;
+        width: 100%;
+        height: 100px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .p2 {
+        background-color: blue;
+        width: 100%;
+        height: 100px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        /* transform: translate3d(-205px, 0, 0); */
+        transform: translate3d(0, 0, 0);
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="p1">33</div>
+      <div class="p2">88</div>
+    </div>
+  </body>
+</html>
