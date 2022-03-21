@@ -1,5 +1,6 @@
   <template>
-  <div class="player">
+  <div class="player"
+       v-show="playlist.length">
     <div class="normal-player"
          v-show="fullScreen">
       <div class="background">
@@ -97,6 +98,7 @@
         </div>
       </div>
     </div>
+    <mini-player />
     <!--oncanplay 当媒介能够开始播放但可能因缓冲而需要停止时运行脚本 -->
     <audio ref="audioRef"
            @pause="pause"
@@ -112,6 +114,7 @@ import { computed, watch, ref } from 'vue'
 import { useStore } from 'vuex'
 import Scroll from '@/components/base/scroll'
 import ProgressBar from './progress-bar'
+import MiniPlayer from './mini-player'
 import useMode from './use-mode'
 import useFavorite from './use-favorite'
 import useCd from './use-cd'
@@ -143,10 +146,23 @@ export default {
     const { getFavoriteIcon, toggleFavorite } = useFavorite()
     const { cdCls, cdRef, cdImageRef } = useCd()
     const {
-      currentLyric, currentLineNum, playLyric, lyricScrollRef, lyricListRef, stopLyric, pureMusicLyric,
+      currentLyric,
+      currentLineNum,
+      playLyric,
+      lyricScrollRef,
+      lyricListRef,
+      stopLyric,
+      pureMusicLyric,
       playingLyric
     } = useLyric({ songReady, currentTime })
-    const { currentShow, middleLStyle, middleRStyle, onMiddleTouchStart, onMiddleTouchMove, onMiddleTouchEnd } = useMiddleInteractive()
+    const {
+      currentShow,
+      middleLStyle,
+      middleRStyle,
+      onMiddleTouchStart,
+      onMiddleTouchMove,
+      onMiddleTouchEnd
+    } = useMiddleInteractive()
 
     // computed
     const playlist = computed(() => store.state.playlist)
@@ -156,10 +172,12 @@ export default {
     const disableCls = computed(() => {
       return songReady.value ? '' : 'disable'
     })
-    const progress = computed(() => currentTime.value / currentSong.value.duration)
+    const progress = computed(
+      () => currentTime.value / currentSong.value.duration
+    )
 
     // watch
-    watch(currentSong, (newSong) => {
+    watch(currentSong, newSong => {
       if (!newSong.id || !newSong.url) {
         return
       }
@@ -171,7 +189,7 @@ export default {
       // cdRef.value.style.transform = 'rotate(0)'
       // cdImageRef.value.style.transform = 'rotate(0)'
     })
-    watch(playing, (newPlaying) => {
+    watch(playing, newPlaying => {
       if (!songReady.value) {
         return
       }
@@ -274,7 +292,8 @@ export default {
 
     function onProgressChanged(progress) {
       progressChanging = false
-      audioRef.value.currentTime = currentTime.value = currentSong.value.duration * progress
+      audioRef.value.currentTime = currentTime.value =
+        currentSong.value.duration * progress
       if (!playing.value) {
         store.commit('setPlayingState', true)
       }
@@ -295,6 +314,7 @@ export default {
       barRef,
       fullScreen,
       currentSong,
+      playlist,
       progress,
       currentTime,
       playIcon,
@@ -339,7 +359,8 @@ export default {
   },
   components: {
     ProgressBar,
-    Scroll
+    Scroll,
+    MiniPlayer
   }
 }
 </script>
