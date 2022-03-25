@@ -13,11 +13,18 @@
                :class="cdCls">
         </div>
       </div>
-      <div>
+      <div class="slider-page">
         <h2 class="name">{{currentSong.name}}</h2>
         <p class="desc">{{currentSong.singer}}</p>
       </div>
-      <div class="control"></div>
+      <div class="control">
+        <progress-circle :radius="32"
+                         :progress="progress">
+          <i class="icon-mini"
+             :class="miniPlayIcon"
+             @click.stop="togglePlay"></i>
+        </progress-circle>
+      </div>
     </div>
   </transition>
 </template>
@@ -25,6 +32,7 @@
 <script>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
+import ProgressCircle from './progress-circle'
 import useCd from './use-cd'
 
 export default {
@@ -56,6 +64,9 @@ export default {
       cdRef,
       cdImageRef
     }
+  },
+  components: {
+    ProgressCircle
   }
 }
 </script>
