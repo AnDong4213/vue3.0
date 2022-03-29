@@ -13,9 +13,16 @@
                :class="cdCls">
         </div>
       </div>
-      <div class="slider-page">
-        <h2 class="name">{{currentSong.name}}</h2>
-        <p class="desc">{{currentSong.singer}}</p>
+      <div ref="sliderWrapperRef"
+           class="slider-wrapper">
+        <div class="slider-group">
+          <div class="slider-page"
+               v-for="song in playlist"
+               :key="song.id">
+            <h2 class="name">{{song.name}}</h2>
+            <p class="desc">{{song.singer}}</p>
+          </div>
+        </div>
       </div>
       <div class="control">
         <progress-circle :radius="32"
@@ -24,6 +31,10 @@
              :class="miniPlayIcon"
              @click.stop="togglePlay"></i>
         </progress-circle>
+      </div>
+      <div class="control"
+           @click.stop="showPlaylist">
+        <i class="icon-playlist"></i>
       </div>
     </div>
   </transition>
@@ -34,6 +45,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import ProgressCircle from './progress-circle'
 import useCd from './use-cd'
+import useMiniSlider from './use-mini-slider'
 
 export default {
   name: 'mini-player',
@@ -48,21 +60,35 @@ export default {
     const store = useStore()
     const fullScreen = computed(() => store.state.fullScreen)
     const currentSong = computed(() => store.getters.currentSong)
+    const playing = computed(() => store.state.playing)
+    const playlist = computed(() => store.state.playlist)
 
     const { cdCls, cdRef, cdImageRef } = useCd() // useCd是个函数，别忘了加括号
+    const { sliderWrapperRef } = useMiniSlider()
+
+    const miniPlayIcon = computed(() =>
+      playing.value ? 'icon-pause-mini' : 'icon-play-mini'
+    )
 
     const showNormalPlayer = () => {
       store.commit('setFullScreen', true)
     }
 
+    const showPlaylist = () => {}
+
     return {
       fullScreen,
       currentSong,
       showNormalPlayer,
+      miniPlayIcon,
+      playlist,
+      showPlaylist,
       // cd
       cdCls,
       cdRef,
-      cdImageRef
+      cdImageRef,
+      // mini-slider
+      sliderWrapperRef
     }
   },
   components: {

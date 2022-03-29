@@ -98,7 +98,8 @@
         </div>
       </div>
     </div>
-    <mini-player />
+    <mini-player :progress="progress"
+                 :togglePlay="togglePlay" />
     <!--oncanplay 当媒介能够开始播放但可能因缓冲而需要停止时运行脚本 -->
     <audio ref="audioRef"
            @pause="pause"
@@ -110,7 +111,7 @@
 </template>
 
 <script>
-import { computed, watch, ref } from 'vue'
+import { computed, watch, ref, nextTick } from 'vue'
 import { useStore } from 'vuex'
 import Scroll from '@/components/base/scroll'
 import ProgressBar from './progress-bar'
@@ -200,6 +201,13 @@ export default {
       } else {
         audioEl.pause()
         stopLyric()
+      }
+    })
+
+    watch(fullScreen, async newFullScreen => {
+      if (newFullScreen) {
+        await nextTick() // 数据变化后，需要获取dom
+        barRef.value.setOffset(progress.value)
       }
     })
 
