@@ -36,13 +36,15 @@
            @click.stop="showPlaylist">
         <i class="icon-playlist"></i>
       </div>
+      <playlist ref="playlistRef"></playlist>
     </div>
   </transition>
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useStore } from 'vuex'
+import Playlist from './playlist'
 import ProgressCircle from './progress-circle'
 import useCd from './use-cd'
 import useMiniSlider from './use-mini-slider'
@@ -63,6 +65,8 @@ export default {
     const playing = computed(() => store.state.playing)
     const playlist = computed(() => store.state.playlist)
 
+    const playlistRef = ref(null)
+
     const { cdCls, cdRef, cdImageRef } = useCd() // useCd是个函数，别忘了加括号
     const { sliderWrapperRef } = useMiniSlider()
 
@@ -74,7 +78,10 @@ export default {
       store.commit('setFullScreen', true)
     }
 
-    const showPlaylist = () => {}
+    const showPlaylist = () => {
+      playlistRef.value.show()
+      console.log(playlistRef.value)
+    }
 
     return {
       fullScreen,
@@ -83,6 +90,7 @@ export default {
       miniPlayIcon,
       playlist,
       showPlaylist,
+      playlistRef,
       // cd
       cdCls,
       cdRef,
@@ -92,7 +100,8 @@ export default {
     }
   },
   components: {
-    ProgressCircle
+    ProgressCircle,
+    Playlist
   }
 }
 </script>
