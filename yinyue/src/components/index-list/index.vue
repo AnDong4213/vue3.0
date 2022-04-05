@@ -45,6 +45,7 @@
 <script>
 import { onMounted } from 'vue'
 import Scroll from '@/components/base/scroll'
+// import Scroll from '@/components/wrap-scroll'
 import useFixed from './use-fixed'
 import useShortcut from './use-shortcut'
 
@@ -64,8 +65,19 @@ export default {
   },
   emits: ['select'],
   setup(props, { emit }) {
-    const { groupRef, onScroll, fixedTitle, fixedStyle, currentIndex } = useFixed(props)
-    const { shortcutList, scrollRef, onShortcutTouchStart, onShortcutTouchMove } = useShortcut(props, groupRef)
+    const {
+      groupRef,
+      onScroll,
+      fixedTitle,
+      fixedStyle,
+      currentIndex
+    } = useFixed(props)
+    const {
+      shortcutList,
+      scrollRef,
+      onShortcutTouchStart,
+      onShortcutTouchMove
+    } = useShortcut(props, groupRef)
 
     onMounted(() => {
       console.log(scrollRef.value.scroll)

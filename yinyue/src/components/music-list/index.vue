@@ -35,9 +35,10 @@
 </template>
 
 <script>
-import Scroll from '@/components/base/scroll'
+// import Scroll from '@/components/base/scroll'
+import Scroll from '@/components/wrap-scroll'
 import SongList from '@/components/base/song-list'
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 const RESERVED_HEIGHT = 40
 
@@ -67,8 +68,7 @@ export default {
     return {
       imageHeight: 0,
       scrollY: 0,
-      maxTranslateY: 0,
-      playlist: []
+      maxTranslateY: 0
     }
   },
   computed: {
@@ -125,13 +125,15 @@ export default {
       const scrollY = this.scrollY
       const imageHeight = this.imageHeight
       if (scrollY >= 0) {
-        blur = Math.min(this.maxTranslateY / imageHeight, scrollY / imageHeight) * 20
+        blur =
+          Math.min(this.maxTranslateY / imageHeight, scrollY / imageHeight) * 20
       }
       return {
         // backdrop-filter 可以为一个元素后面区域添加图形效果（如模糊或颜色偏移）。适用于元素背后的所有元素，为了看到效果，必须使元素或其背景至少部分透明。添加滤镜
         backdropFilter: `blur(${blur}px)`
       }
-    }
+    },
+    ...mapState(['playlist'])
   },
   mounted() {
     this.imageHeight = this.$refs.bgImage.clientHeight

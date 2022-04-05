@@ -42,6 +42,7 @@
 <script>
 import Slider from '@/components/base/slider'
 import Scroll from '@/components/base/scroll'
+// import Scroll from '@/components/wrap-scroll'
 import { getRecommend } from '@/service/recommend'
 
 export default {
@@ -61,7 +62,7 @@ export default {
     this.albums = result.albums
   },
   methods: {
-    selectItem() { }
+    selectItem() {}
   },
   computed: {
     loading() {
