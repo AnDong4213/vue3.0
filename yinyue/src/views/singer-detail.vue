@@ -8,13 +8,20 @@
 </template>
 
 <script>
-import { getSingerDetail } from '@/service/singer'
-import { processSongs } from '@/service/song'
+/* import { processSongs } from '@/service/song'
 import MusicList from '@/components/music-list'
-import storage from 'good-storage'
+import storage from 'good-storage' */
+import { getSingerDetail } from '@/service/singer'
 import { SINGER_KEY } from '@/assets/js/constant'
+import createDetailComponent from '@/assets/js/create-detail-component'
 
-export default {
+export default createDetailComponent(
+  'singer-detail',
+  SINGER_KEY,
+  getSingerDetail
+)
+
+/* export default {
   name: 'singer-detail',
   props: {
     singer: Object
@@ -64,7 +71,7 @@ export default {
   components: {
     MusicList
   }
-}
+} */
 </script>
 
 <style lang="scss" scoped>

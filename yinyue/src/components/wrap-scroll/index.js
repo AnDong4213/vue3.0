@@ -32,7 +32,6 @@ export default {
       ),
       {
         default: withCtx(() => {
-          console.log(999)
           return [renderSlot(ctx.$slots, 'default')]
         })
       }
