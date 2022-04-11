@@ -17,7 +17,6 @@ export default function createDetailComponent(name, key, fetch) {
     computed: {
       computedData() {
         let ret = null
-        console.log(this.data)
         const data = this.data
         if (data) {
           ret = data

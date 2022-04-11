@@ -8,14 +8,11 @@
 </template>
 
 <script>
-import MusicList from '@/components/music-list'
+import createDetailComponent from '@/assets/js/create-detail-component'
+import { ALBUM_KEY } from '@/assets/js/constant'
+import { getAlbum } from '@/service/recommend'
 
-export default {
-  name: 'album',
-  components: {
-    MusicList
-  }
-}
+export default createDetailComponent('album', ALBUM_KEY, getAlbum)
 </script>
 
 <style lang="scss" scoped>

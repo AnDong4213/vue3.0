@@ -8,7 +8,7 @@
       <transition appear
                   name="slide">
         <component :is="Component"
-                   :singer="selectedSinger"></component>
+                   :data="selectedSinger" />
       </transition>
     </router-view>
   </div>

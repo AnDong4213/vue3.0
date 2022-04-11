@@ -36,6 +36,13 @@
         </div>
       </div>
     </scroll>
+    <router-view v-slot="{Component}">
+      <transition appear
+                  name="slide">
+        <component :is="Component"
+                   :data="selectedAlbum" />
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -44,6 +51,8 @@ import Slider from '@/components/base/slider'
 // import Scroll from '@/components/base/scroll'
 import Scroll from '@/components/wrap-scroll'
 import { getRecommend } from '@/service/recommend'
+import storage from 'good-storage'
+import { ALBUM_KEY } from '@/assets/js/constant'
 
 export default {
   name: 'recommend',
@@ -62,7 +71,17 @@ export default {
     this.albums = result.albums
   },
   methods: {
-    selectItem() {}
+    selectItem(album) {
+      console.log(album)
+      this.selectedAlbum = album
+      this.cacheAlbum(album)
+      this.$router.push({
+        path: `/recommend/${album.id}`
+      })
+    },
+    cacheAlbum(album) {
+      storage.session.set(ALBUM_KEY, album)
+    }
   },
   computed: {
     loading() {
@@ -90,7 +109,7 @@ export default {
       position: relative;
       width: 100%;
       height: 0;
-      padding-top: 40%; // 为了获取一个宽高比是 10:4 的容器
+      padding-top: 40%;
       overflow: hidden;
       .slider-content {
         position: absolute;
@@ -100,7 +119,6 @@ export default {
         height: 100%;
       }
     }
-
     .recommend-list {
       .list-title {
         height: 65px;
