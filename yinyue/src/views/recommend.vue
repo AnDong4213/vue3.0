@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     selectItem(album) {
-      console.log(album)
       this.selectedAlbum = album
       this.cacheAlbum(album)
       this.$router.push({

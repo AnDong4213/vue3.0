@@ -10,6 +10,8 @@ const SingerDetail = () =>
 
 const TopList = () =>
   import('@/views/top-list' /* webpackChunkName: "top-list" */)
+const TopDetail = () =>
+  import('@/views/top-detail' /* webpackChunkName: "top-detail" */)
 
 const Search = () => import('@/views/search' /* webpackChunkName: "search" */)
 
@@ -43,7 +45,13 @@ const routes = [
   },
   {
     path: '/top-list',
-    component: TopList
+    component: TopList,
+    children: [
+      {
+        path: ':id',
+        component: TopDetail
+      }
+    ]
   },
   {
     path: '/search',
