@@ -34,9 +34,10 @@
 </template>
 
 <script>
-import { ref, watch, computed } from 'vue'
+import { ref, watch, computed, nextTick } from 'vue'
 import { search } from '@/service/search'
 import { processSongs } from '@/service/song'
+import usePullUpLoad from './use-pull-up-load'
 
 export default {
   name: 'suggest',
@@ -55,7 +56,7 @@ export default {
     const page = ref(1)
     const loadingText = ref('哈哈Loading')
     const noResultText = ref('抱歉，暂无搜索结果')
-    // const manualLoading = ref(false)
+    const manualLoading = ref(false)
 
     const loading = computed(() => {
       return !singer.value && !songs.value.length
@@ -63,12 +64,17 @@ export default {
     const noResult = computed(() => {
       return !singer.value && !songs.value.length && !hasMore.value
     })
-    /* const pullUpLoading = computed(() => {
+    const pullUpLoading = computed(() => {
       return isPullUpLoad.value && hasMore.value
-    }) */
-    /* const preventPullUpLoad = computed(() => {
+    })
+    const preventPullUpLoad = computed(() => {
       return loading.value || manualLoading.value
-    }) */
+    })
+
+    const { rootRef, isPullUpLoad, scroll } = usePullUpLoad(
+      searchMore,
+      preventPullUpLoad
+    )
 
     watch(
       () => props.query,
@@ -93,10 +99,29 @@ export default {
       songs.value = await processSongs(result.songs)
       singer.value = result.singer
       hasMore.value = result.hasMore
+      await nextTick()
+      await makeItScrollable()
     }
 
-    /*  async function searchMore() {}
-    async function makeItScrollable() {} */
+    async function searchMore() {
+      if (!hasMore.value || !props.query) {
+        return
+      }
+      page.value++
+      const result = await search(props.query, page.value, props.showSinger)
+      songs.value = songs.value.concat(await processSongs(result.songs))
+      hasMore.value = result.hasMore
+      await nextTick()
+      await makeItScrollable()
+    }
+
+    async function makeItScrollable() {
+      if (scroll.value.maxScrollY >= -1) {
+        manualLoading.value = true
+        await searchMore()
+        manualLoading.value = false
+      }
+    }
 
     function selectSong(song) {
       emit('select-song', song)
@@ -113,11 +138,11 @@ export default {
       noResultText,
       loading,
       noResult,
-      // pullUpLoading,
+      pullUpLoading,
       selectSong,
-      selectSinger
+      selectSinger,
       // pullUpLoad
-      // rootRef
+      rootRef
     }
   }
 }

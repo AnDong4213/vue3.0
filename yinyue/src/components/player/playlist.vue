@@ -167,7 +167,7 @@ export default {
     }
 
     function showAddSong() {
-      addSongRef.value.show()
+      // addSongRef.value.show()
     }
 
     return {
