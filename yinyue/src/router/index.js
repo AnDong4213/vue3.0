@@ -65,10 +65,13 @@ const routes = [
   },
   {
     path: '/user',
-    component: UserCenter
+    // component: UserCenter
+    components: {
+      user: UserCenter
+    }
   }
 ]
-
+console.log('process.env.BASE_URL', process.env.BASE_URL)
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes
