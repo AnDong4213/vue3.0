@@ -45,7 +45,7 @@ import Suggest from '@/components/search/suggest'
 import Scroll from '@/components/wrap-scroll'
 import { ref } from 'vue'
 import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import storage from 'good-storage'
 import { getHotKeys } from '@/service/search'
 import { SINGER_KEY } from '@/assets/js/constant'
@@ -58,6 +58,7 @@ export default {
     const selectedSinger = ref(null)
     const store = useStore()
     const router = useRouter()
+    console.log(useRoute().query)
 
     getHotKeys().then(result => {
       hotKeys.value = result.hotKeys

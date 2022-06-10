@@ -1,8 +1,10 @@
 <template>
   <div class="header">
     <!-- <span class="icon"></span> -->
-    <h1 class="text">Chicken Music</h1>
-    <router-link class="mine" to="/user">
+    <h1 class="text"
+        @click="jumpwx">Chicken Music</h1>
+    <router-link class="mine"
+                 to="/user">
       <i class="icon-mine"></i>
     </router-link>
   </div>
@@ -10,7 +12,12 @@
 
 <script>
 export default {
-  name: 'm-header'
+  name: 'm-header',
+  methods: {
+    jumpwx() {
+      this.$router.push('wx')
+    }
+  }
 }
 </script>
 
@@ -35,7 +42,10 @@ export default {
     display: inline-block;
     vertical-align: top;
     line-height: 44px;
-    font-size: $font-size-large;
+    /* font-size: $font-size-large; */
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
   }
   .mine {
     position: absolute;

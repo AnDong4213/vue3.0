@@ -13,6 +13,7 @@
     "@better-scroll/pull-up": "^2.4.2",
     "@better-scroll/slide": "^2.4.2",
     "axios": "^0.25.0",
+    "callapp-lib": "^3.5.1",
     "core-js": "^3.6.5",
     "create-keyframe-animation": "^0.1.0",
     "good-storage": "^1.1.1",
