@@ -12,8 +12,6 @@
 </template>
 
 <script>
-// import wx from '@/assets/js/jweixin-1.6.0'
-import Clipboard from '@/assets/js/clipboard'
 import CallApp from 'callapp-lib'
 
 export default {
@@ -25,7 +23,6 @@ export default {
     }
   },
   created() {
-    // console.log(Clipboard)
     console.log(document)
     console.log(window.navigator.userAgent)
     alert(window.navigator.userAgent.toLowerCase())
@@ -43,29 +40,8 @@ export default {
       alert(navigator.userAgent)
     },
     upApp1() {
-      // eslint-disable-next-line no-new
-      const instance = new Clipboard('.btn', {
-        text: function() {
-          return 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5MzcyMzc2OQ==#wechat_redirect'
-          // return 'http://pay-zjjg-xt-test.bobfintech.com.cn:8025/capital-supervision-h5-tencent/payPage/AddBankRefund?orderNo=2022052301000001&shortLink=1'
-          // return 'http://supervision.natapp1.cc/YBFrqe339911'
-        }
-      })
-      console.log(instance)
-      // this.instance = instance
-      instance.on('success', function(e) {
-        // alert('文字已复制到剪贴板中')
-        console.log(e.text)
-      })
-
-      instance.on('error', function(e) {
-        alert('异常错误： ' + JSON.stringify(e.message))
-        console.log(e)
-      })
       const a = this.$refs.btn
       a.href = 'weixin://'
-      // alert(88)
-      // instance.destroy()
     },
     upApp2() {
       const options = {
