@@ -2,19 +2,21 @@
   <div class="validate-input-container pb-3">
     <input class="form-control"
            v-if="tag !== 'textarea'"
-           :class="{'is-invalid': inputRef.error}"
+           :class="{ 'is-invalid': inputRef.error }"
            @blur="validateInput"
            v-model="inputVal"
            v-bind="$attrs" />
     <textarea v-else
               class="form-control"
-              :class="{'is-invalid': inputRef.error}"
+              :class="{ 'is-invalid': inputRef.error }"
               @blur="validateInput"
               v-model="inputVal"
               v-bind="$attrs">
     </textarea>
+
+    <span>Fallthrough attribute: {{ $attrs }}</span>
     <span v-if="inputRef.error"
-          class="invalid-feedback">{{inputRef.message}}</span>
+          class="invalid-feedback">{{ inputRef.message }}</span>
   </div>
 </template>
 
@@ -41,8 +43,9 @@ export default defineComponent({
     }
   },
   // 如果你不希望组件的根元素继承 attribute，可以在组件的选项中设置 inheritAttrs: false。禁用 attribute 继承的常见场景是需要将 attribute 应用于根节点之外的其他元素。
-  inheritAttrs: false, 
+  inheritAttrs: false,
   setup(props, context) {
+    console.log(context.attrs)
     const inputRef = reactive({
       val: props.modelValue || "",
       error: false,

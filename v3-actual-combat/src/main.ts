@@ -4,10 +4,10 @@ import store from "./store";
 import axios from "axios";
 
 import App from "./App.vue";
-export const CODE = "A88CE88349E612DE";
+export const CODE = "130E5ACD44AEF65F";
 
 axios.defaults.baseURL = "http://apis.imooc.com/api";
-axios.interceptors.request.use(config => {
+axios.interceptors.request.use((config) => {
   store.commit("setLoading", true);
   store.commit("setError", { status: false, message: "" });
   config.params = { ...config.params, icode: CODE };
@@ -20,11 +20,11 @@ axios.interceptors.request.use(config => {
   return config;
 });
 axios.interceptors.response.use(
-  config => {
+  (config) => {
     store.commit("setLoading", false);
     return config;
   },
-  e => {
+  (e) => {
     // console.log(e.response);
     const { error } = e.response.data;
     store.commit("setError", { status: true, message: error });
@@ -45,7 +45,4 @@ hello().then(res => console.log(res)); */
 hello2().then(res => console.log(res)); */
 // console.log(hello2()); // Promise{<pending>}
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .mount("#app");
+createApp(App).use(store).use(router).mount("#app");

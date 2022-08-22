@@ -1,7 +1,7 @@
 <template>
   <li class="dropdown-option"
       @click="handleItemClick"
-      :class="{'is-disabled': disabled}">
+      :class="{ 'is-disabled': disabled }">
     <slot></slot>
   </li>
 </template>
@@ -23,6 +23,7 @@ export default defineComponent({
   },
   setup(props) {
     const handleItemClick = (e: MouseEvent) => {
+      console.log(e, props)
       emitter.emit("dropdown-item-clicked", { e, props });
     };
 

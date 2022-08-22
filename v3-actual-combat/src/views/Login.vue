@@ -8,6 +8,7 @@
         <validate-input :rules="emailRules"
                         v-model="emailVal"
                         type='text'
+                        foo-bar="乐乐"
                         placeholder='请输入邮箱地址' />
       </div>
       <div class="mb-3">

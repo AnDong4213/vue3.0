@@ -16,7 +16,8 @@
     <ul v-else
         class="list-inline mb-0">
       <li class="list-inline-item">
-        <dropdown :title="`你好 ${user.nickName}`">
+        <dropdown @item-clicked="gaga"
+                  :title="`你好 ${user.nickName}`">
           <dropdown-item closeAfterClick>
             <router-link to="/create"
                          class="dropdown-item">新建文章</router-link>
@@ -31,7 +32,8 @@
           </dropdown-item>
           <dropdown-item closeAfterClick><a href="#"
                class="dropdown-item"
-               @click="handleLogout">退出登陆</a></dropdown-item>
+               @click="handleLogout">退出登陆</a>
+          </dropdown-item>
         </dropdown>
       </li>
     </ul>
@@ -65,8 +67,13 @@ export default defineComponent({
       }, 2000);
     };
 
+    const gaga = (p: any) => {
+      console.log('p---', p.props)
+    }
+
     return {
-      handleLogout
+      handleLogout,
+      gaga
     };
   },
   components: {
