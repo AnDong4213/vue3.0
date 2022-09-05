@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Drag2</title>
+    <style>
+      #draggable {
+        text-align: center;
+        background: white;
+      }
+
+      .dropzone {
+        width: 200px;
+        height: 40px;
+        background: blueviolet;
+        margin: 10px;
+        padding: 10px;
+        margin-bottom: 100px;
+        user-select: none;
+      }
+
+      .dropzone.dragover {
+        background-color: orange;
+      }
+
+      .dragging {
+        opacity: 0.5;
+        color: red;
+      }
+      #newId {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!--给元素加上draggable=true 属性，使元素可以被拖动-->
+    <div class="dropzone">
+      <div id="draggable" draggable="true">This div is draggable</div>
+    </div>
+
+    <div class="dropzone" id="droptarget">dropzone</div>
+
+    <script>
+      let dragged;
+
+      /* events fired on the draggable target */
+      const source = document.getElementById("draggable");
+      source.addEventListener("drag", (event) => {
+        console.log("--- drag");
+      });
+
+      source.addEventListener("dragstart", (event) => {
+        console.log("dragstart");
+        console.log("dragstart--", event);
+        console.log("dragstart--", event.target.outerHTML);
+
+        dragged = event.target;
+        event.dataTransfer.setData("dragContent", event.target.id);
+        event.effectAllowed = "copyMove";
+        event.target.classList.add("dragging");
+      });
+
+      source.addEventListener("dragend", (event) => {
+        console.log("dragend");
+        // reset the transparency
+        event.target.classList.remove("dragging");
+      });
+
+      /* events fired on the drop targets */
+      const target = document.getElementById("droptarget");
+      target.addEventListener("dragover", (event) => {
+        console.log("dragover");
+        // prevent default to allow drop
+        event.preventDefault();
+      });
+      target.addEventListener("dragenter", () => {
+        console.log("dragenter");
+        if (event.target.classList.contains("dropzone")) {
+          event.target.classList.add("dragover");
+        }
+      });
+      target.addEventListener("dragleave", (event) => {
+        console.log("dragleave");
+        // reset background of potential drop target when the draggable element leaves it
+        if (event.target.classList.contains("dropzone")) {
+          event.target.classList.remove("dragover");
+        }
+      });
+
+      target.addEventListener("drop", (event) => {
+        console.log("--- drop");
+        console.log("--- drop", event.dataTransfer.getData("dragContent"));
+        event.preventDefault();
+        console.log(dragged.parentNode);
+
+        if (event.target.classList.contains("dropzone")) {
+          event.target.classList.remove("dragover");
+          // dragged.parentNode.removeChild(dragged);
+          const nodeCopy = document
+            .getElementById(event.dataTransfer.getData("dragContent"))
+            .cloneNode(true);
+          nodeCopy.id = "newId";
+          event.target.appendChild(nodeCopy);
+          // event.target.appendChild(dragged);
+
+          //此方式不好
+          /* event.target.appendChild(
+            document.getElementById(event.dataTransfer.getData("dragContent"))
+          ); */
+        }
+      });
+    </script>
+  </body>
+</html>
