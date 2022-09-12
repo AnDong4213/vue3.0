@@ -19,8 +19,13 @@
     myDiv.addEventListener('look', e => {
       console.log(e)
     })
+	
+	myDiv.addEventListener('click', e => {
+      console.log(e)
+	  myDiv.dispatchEvent(ev)
+    })
 
-    const aa = myDiv.dispatchEvent(ev)
-    console.log(aa)
+    // const aa = myDiv.dispatchEvent(ev)
+    // console.log(aa)
   </script>
 </html>
