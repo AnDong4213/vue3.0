@@ -1,8 +1,8 @@
 <template>
   <m-header></m-header>
   <tab></tab>
-  <router-view :style="viewStyle"
-               v-slot="{ Component }">
+  <router-view v-slot="{ Component }"
+               :style="viewStyle">
     <keep-alive>
       <component :is="Component" />
     </keep-alive>

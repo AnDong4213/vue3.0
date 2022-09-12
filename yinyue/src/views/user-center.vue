@@ -91,11 +91,13 @@ export default {
   z-index: 100;
   width: 100%;
   background: $color-background;
+
   .back {
     position: absolute;
     top: 0;
     left: 6px;
     z-index: 50;
+
     .icon-back {
       display: block;
       padding: 10px;
@@ -103,9 +105,11 @@ export default {
       color: $color-theme;
     }
   }
+
   .switches-wrapper {
     margin: 10px 0 30px 0;
   }
+
   .play-btn {
     box-sizing: border-box;
     width: 135px;
@@ -116,26 +120,31 @@ export default {
     color: $color-text-l;
     border-radius: 100px;
     font-size: 0;
+
     .icon-play {
       display: inline-block;
       vertical-align: middle;
       margin-right: 6px;
       font-size: $font-size-medium-x;
     }
+
     .text {
       display: inline-block;
       vertical-align: middle;
       font-size: $font-size-small;
     }
   }
+
   .list-wrapper {
     position: absolute;
     top: 110px;
     bottom: 0;
     width: 100%;
+
     .list-scroll {
       height: 100%;
       overflow: hidden;
+
       .list-inner {
         padding: 20px 30px;
       }
