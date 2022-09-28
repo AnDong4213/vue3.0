@@ -4,19 +4,33 @@
     <title>Function</title>
 
     <script>
-      console.log('------------------', function () {}.constructor === Function)
+      console.log(
+        "------------------",
+        function () {}.constructor === Function
+      );
 
-      var x = 10
+      var x = 10;
 
       function createFunction1() {
-        var x = 20
-        return new Function('file1', 'file2', 'return this.x+file1+file2;') // 这里的 x 指向最上面全局作用域内的 x
+        var x = 20;
+        return new Function("file1", "file2", "return this.x+file1+file2;"); // 这里的 x 指向最上面全局作用域内的 x
       }
 
-      var f1 = createFunction1()
-      console.log(f1)
-      console.log(f1.call(this, 1, 3))
+      var f1 = createFunction1();
+      console.log(f1);
+      console.log(f1.call(this, 1, 3));
       // console.log(createFunction1.constructor === Function) // true
+
+      const createStore2 = (initData = { a: 1 }) => {
+        console.log(initData);
+      };
+
+      const createStore = (initData = { a: 1 }) =>
+        (() => {
+          console.log(initData);
+        })();
+      createStore({ b: 7 });
+      createStore2({ ab: 7 });
     </script>
   </head>
   <body></body>
