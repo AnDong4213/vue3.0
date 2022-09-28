@@ -4,28 +4,27 @@
     <title>Event</title>
   </head>
   <body>
-
     <div id="myDiv">Event</div>
   </body>
 
   <script>
-    const myDiv = document.getElementById('myDiv')
-    console.log(myDiv)
-    const ev = new Event('look', {bubbles: true, cancelable: false})
+    const myDiv = document.getElementById("myDiv");
+    console.log(myDiv);
+    const ev = new Event("look", { bubbles: true, cancelable: false });
     /* const ev = new CustomEvent('look', {bubbles: true, cancelable: false, detail: {
       text: '看看'
     }}) */
 
-    myDiv.addEventListener('look', e => {
-      console.log(e)
-    })
-	
-	myDiv.addEventListener('click', e => {
-      console.log(e)
-	  myDiv.dispatchEvent(ev)
-    })
+    myDiv.addEventListener("look", (e) => {
+      console.log(e);
+    });
 
-    // const aa = myDiv.dispatchEvent(ev)
-    // console.log(aa)
+    myDiv.addEventListener("click", (e) => {
+      console.log(e);
+      myDiv.dispatchEvent(ev);
+    });
+
+    const aa = myDiv.dispatchEvent(ev);
+    console.log(aa);
   </script>
 </html>
