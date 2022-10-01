@@ -29,12 +29,31 @@ if (historySongs.length > 0) {
   })
 }
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(lazyPlugin, {
-    loading: require('@/assets/images/default.png')
-  })
-  .directive('loading', loadingDirective)
-  .directive('no-result', noResultDirective)
-  .mount('#app')
+function render() {
+  createApp(App)
+    .use(store)
+    .use(router)
+    .use(lazyPlugin, {
+      loading: require('@/assets/images/default.png')
+    })
+    .directive('loading', loadingDirective)
+    .directive('no-result', noResultDirective)
+    .mount('#app')
+}
+
+if (!window.__POWERED_BY_QIANKUN__) {
+  render()
+}
+
+export async function bootstrap() {
+  console.log('yinyue-- app bootstrap')
+}
+
+export async function mount(props) {
+  console.log('yinyue- mount')
+  render()
+}
+
+export async function unmount(ctx) {
+  console.log('yinyue- unmount')
+}
