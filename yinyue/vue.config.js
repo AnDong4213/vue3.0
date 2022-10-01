@@ -1,5 +1,8 @@
 const registerRouter = require('./backend/router')
 
+const packageName = require('./package.json').name
+const port = 8082
+
 module.exports = {
   css: {
     loaderOptions: {
@@ -15,6 +18,10 @@ module.exports = {
   devServer: {
     before(app) {
       registerRouter(app)
+    },
+    port,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
     }
   },
   configureWebpack: (config) => {
@@ -22,6 +29,16 @@ module.exports = {
       const BundleAnalyzerPlugin =
         require('webpack-bundle-analyzer').BundleAnalyzerPlugin
       config.plugins.push(new BundleAnalyzerPlugin())
+    }
+
+    return {
+      output: {
+        // 把子应用打包成 umd 库格式
+        filename: 'yinyue.js',
+        library: `${packageName}-[name]`,
+        libraryTarget: 'umd',
+        jsonpFunction: `webpackJsonp_${packageName}`
+      }
     }
   }
 }
