@@ -7,6 +7,7 @@ import Echarts2 from "@/views/Echarts2.vue";
 import Echarts3 from "@/views/Echarts3.vue";
 import EchartsMap from "@/views/EchartsMap.vue";
 import EchartsMap2 from "@/views/EchartsMap2.vue";
+import Svg from "@/views/Svg.vue";
 
 const routerHistory = createWebHistory();
 const router = createRouter({
@@ -61,6 +62,11 @@ const router = createRouter({
       meta: {
         requiredLogin: true
       }
+    },
+    {
+      path: "/svg",
+      name: "svg",
+      component: Svg
     }
   ]
 });
