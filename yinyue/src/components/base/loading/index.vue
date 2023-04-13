@@ -4,7 +4,7 @@
       <img width="24"
            height="24"
            src="./loading.gif">
-      <p class="desc">{{title}}</p>
+      <p class="desc">{{ title }}</p>
     </div>
   </div>
 </template>
@@ -31,8 +31,10 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+
   .loading-content {
     text-align: center;
+
     .desc {
       line-height: 20px;
       font-size: $font-size-small;

@@ -4,7 +4,7 @@ import store from "./store";
 import axios from "axios";
 
 import App from "./App.vue";
-export const CODE = "130E5ACD44AEF65F";
+export const CODE = "97859C6369109F0A";
 
 axios.defaults.baseURL = "http://apis.imooc.com/api";
 axios.interceptors.request.use((config) => {

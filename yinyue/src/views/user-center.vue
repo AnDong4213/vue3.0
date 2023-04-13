@@ -17,7 +17,7 @@
     </div>
     <div class="list-wrapper">
       <scroll class="list-scroll"
-              v-if="currentIndex===0">
+              v-if="currentIndex === 0">
         <div class="list-inner">
           <song-list :songs="favoriteList"
                      @select="selectSong">
@@ -25,7 +25,7 @@
         </div>
       </scroll>
       <scroll class="list-scroll"
-              v-if="currentIndex===1">
+              v-if="currentIndex === 1">
         <div class="list-inner">
           <song-list :songs="playHistory"
                      @select="selectSong">

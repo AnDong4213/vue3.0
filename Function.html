@@ -10,6 +10,7 @@
       );
 
       var x = 10;
+      const aa = { x: 100 };
 
       function createFunction1() {
         var x = 20;
@@ -18,7 +19,7 @@
 
       var f1 = createFunction1();
       console.log(f1);
-      console.log(f1.call(this, 1, 3));
+      console.log(f1.call(aa, 1, 3));
       // console.log(createFunction1.constructor === Function) // true
 
       const createStore2 = (initData = { a: 1 }) => {
