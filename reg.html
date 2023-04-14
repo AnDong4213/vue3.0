@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>正则表达</title>
+  </head>
+  <body>
+    <h6>正则</h6>
+    <script>
+      const strMatch =
+        "26 15:39 CN_CM_SHANGHAI_24709063_M.mtl79642 Apr 26 15:39 CN_CM_SHANGHAI_2470190623_Q.obj";
+      console.log(strMatch);
+      // 1.截取字符串中以CN_开头.mtl结尾的部分（包含开头和结尾）
+      var matchReg1 = /CN_.*?\.mtl/gi;
+      console.log(strMatch.match(matchReg1)); // ['CN_CM_SHANGHAI_24709063_M.mtl']
+      // .表示除换行符\n之外的任意字符
+      // *匹配前面的子表达式0次或多次
+      // ？匹配前面的子表达式零次或一次，或指明一个非贪婪限定符
+      // \.是匹配.
+      // g全局匹配  i不区分大小写
+
+      // 2.截取字符串以CN_开头，以.mtl之前的内容结尾
+      var matchReg2 = /CN_.*?(?=.mtl)/gi;
+      console.log(strMatch.match(matchReg2)); // ['CN_CM_SHANGHAI_24709063_M']
+      // (?=.mtl) 表示以.mtl结尾的前面字符串，不包含.mtl
+
+      // 3.不包括CN_, .mtl之前的。(包括.mtl)的字符串方法
+      var matchReg3 = /(?<=CN_).*?\.mtl/;
+      console.log(strMatch.match(matchReg3)[0]); // CM_SHANGHAI_24709063_M.mtl
+
+      // 4.截取字符串CN_和.mtl之间的内容（不包含CN_和.mtl）
+      var matchReg4 = /(?<=CN_).*?(?=.mtl)/;
+      console.log(strMatch.match(matchReg4)[0]); // CM_SHANGHAI_24709063_M
+      // (?<=CN_)表示获取CN_之后的字符串。不包含CN_
+
+      // 5.输出以CN_开头，.mtl或者.obj结尾的字符串
+      var matchReg5 = /CN_.*?(.mtl|.obj)/;
+      console.log(strMatch.match(matchReg5)[0]); // CN_CM_SHANGHAI_24709063_M.mtl
+
+      // 6.输出以CN_开头，以.mtl或者.obj结尾之前的内容
+      var matchReg6 = /CN_.*?(?=(.mtl|.obj))/;
+      console.log(strMatch.match(matchReg6)[0]); // CN_CM_SHANGHAI_24709063_M
+
+      /*
+        ?= 标识以什么结尾前面的字符串，不包括
+        ?<= 标识以什么结尾后面的字符串，不包括
+      */
+    </script>
+  </body>
+</html>
