@@ -44,6 +44,11 @@
         ?= 标识以什么结尾前面的字符串，不包括
         ?<= 标识以什么结尾后面的字符串，不包括
       */
+
+      function toLine(name) {
+        return name.replace(/([A-Z])/g, "_$1").toLocaleUpperCase();
+      }
+      console.log(toLine("aBcdEfg")); //a_bcd_efg
     </script>
   </body>
 </html>
